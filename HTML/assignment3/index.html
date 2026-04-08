@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Assignment 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat';
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    td {
+      padding: 4px 8px 4px 0;
+      font-size: 14px;
+    }
+    fieldset {
+      margin-bottom: 12px;
+      padding: 10px 15px;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #000;
+    }
+    input, select, textarea {
+      font-family: 'Montserrat';
+      font-size: 12px;
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML Learning</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav><hr>
+  <main>
+    <h2 style="margin-top:12px; margin-bottom:12px; font-size: 26px;">HTML Forms</h2><hr>
+    <section style="font-family: 'Times New Roman', Times, serif;">
+      <h3 style="margin-top: 30px;">Zoo Keeper Application Form</h3>
+      <p style="font-size: 13px; font-style: italic;">Please complete the form. Mandatory fields are marked with a <span style="color: red;">*</span></p>
+
+      <fieldset>
+        <legend style="font-size: 13px;"><b>CONTACT DETAILS</b></legend>
+        <table style="width: 28%;">
+          <colgroup>
+            <col style="width: 220px;" />
+            <col />
+          </colgroup>
+          <tr>
+            <td><b>Name</b><span style="color: red;">*</span></td>
+            <td><input type="text" name="name" required style="width: 100%; box-sizing: border-box;" /></td>
+          </tr>
+          <tr>
+            <td><b>Telephone</b></td>
+            <td><input type="text" name="telephone" style="width: 100%; box-sizing: border-box;" /></td>
+          </tr>
+          <tr>
+            <td><b>Email</b> <span style="color: red;">*</span></td>
+            <td><input type="email" name="email" required style="width: 100%; box-sizing: border-box;" /></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend style="font-size: 13px;"><b>PERSONAL INFORMATION</b></legend>
+        <table style="width: 28%;">
+          <colgroup>
+            <col style="width: 220px;" />
+            <col />
+          </colgroup>
+          <tr>
+            <td><span style="color: red;">*</span><b>Age</b></td>
+            <td><input type="number" name="age" required style="width: 100%; box-sizing: border-box;" /></td>
+          </tr>
+          <tr>
+            <td><b>Gender</b></td>
+            <td>
+              <select name="gender" style="width: 100%; box-sizing: border-box;">
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; "><b>When did you first know you wanted to be a zoo-keeper?</b></td>
+            <td><textarea name="zoo-story" rows="4" style="width: 200%; box-sizing: border-box;"></textarea></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend style="font-size: 13px;"><b>PICK YOUR FAVORITE ANIMALS</b></legend>
+        <table>
+          <tr>
+            <td><input type="checkbox" name="animal" value="zebra"/>Zebra</td>
+            <td><input type="checkbox" name="animal" value="cat" />Cat</td>
+            <td><input type="checkbox" name="animal" value="anaconda" />Anaconda</td>
+            <td><input type="checkbox" name="animal" value="human" />Human</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="animal" value="elephant" />Elephant</td>
+            <td><input type="checkbox" name="animal" value="wildebeest" />Wildebeest</td>
+            <td><input type="checkbox" name="animal" value="pigeon" />Pigeon</td>
+            <td><input type="checkbox" name="animal" value="crab" />Crab</td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <button type="submit" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; background: #003153; color: white; border: none; padding: 8px 16px; cursor: pointer; margin-top: 6px; border-radius: 5px;">Submit Application</button>
+    </section>
+
+    <hr style="margin: 20px 0;" />
+
+    <section>
+      <p style="font-size: 20px; margin-bottom: 14px;"><b>Personal Details</b></p>
+
+      <table>
+        <tr>
+          <td style="font-size: 13px; padding-right: 16px; width: 130px;"><b>Name</b></td>
+          <td><input type="text" name="pd-name" /></td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; padding-right: 16px; width: 130px;"><b>Email</b></td>
+          <td><input type="text" name="pd-email" /></td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; padding-right: 16px; width: 130px;"><b>Location</b></td>
+          <td><input type="text" name="pd-location" /></td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; padding-right: 16px; width: 130px;"><b>Gender</b></td>
+          <td>
+            <input type="radio" name="pd-gender" value="male" /> Male
+            <input type="radio" name="pd-gender" value="female" /> Female
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; font-weight: 700; padding-right: 16px; width: 130px;">Country</td>
+          <td>
+            <select name="country">
+              <option value="country-select">Select country</option>
+              <option>Nepal</option>
+              <option>USA</option>
+              <option>UK</option>
+              <option>India</option>
+              <option>Australia</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 13px; font-weight: 700; padding-right: 16px; width: 130px; padding-top: 6px;">Other Information</td>
+          <td><textarea name="pd-other" rows="4" cols="24"></textarea></td>
+        </tr>
+      </table>
+
+      <div style="margin: 10px 0 10px 146px; font-size: 13px;">
+        <input type="checkbox" name="newsletter" id="newsletter" />
+        <label for="newsletter">I want to receive the newsletter</label>
+      </div>
+
+      <button type="submit" style="font-family: 'Montserrat'; font-size: 12px; margin-left: 146px; padding: 5px 14px; cursor: pointer; margin-bottom:12px;">Submit</button>
+    </section>
+
+  </main>
+
+  <hr />
+
+  <footer>
+    <p style="font-size: 13px; padding: 14px 0 18px;">© Copyright. End of my first project</p>
+  </footer>
+
+</body>
+</html>

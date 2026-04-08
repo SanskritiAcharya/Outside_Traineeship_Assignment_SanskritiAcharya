@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Assignment 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    body{
+      font-family: Montserrat; 
+      font-size: 13px; 
+      margin: 8px 35px; 
+      color: #222; }
+    nav{
+      display: flex; 
+      gap: 18px; }
+    nav a{
+      color: #222; 
+      text-decoration: none; }
+    hr.line2{
+      border-top: 2px solid black; }
+    .red{ 
+      text-decoration: line-through; 
+      color: red; }
+    select{
+      font-family: Montserrat; 
+      font-size: 13px; 
+      padding: 10px;}
+    audio{
+      vertical-align: middle; }
+    td{
+      vertical-align: middle; 
+      width: 50%; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTML Learning</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Support</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+
+    <h1 style="display:inline;">Beautiful Title</h1><sup><b style="font-size: 14px;"> More Beautiful</b></sup>
+    <hr>
+
+    <p><b>Far far away, behind the word mountains,</b> far from the countries Vokalia and
+    Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
+    coast of the Semantics, a large language ocean. A small river named Duden flows by their place
+    and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted
+    parts of sentences fly into your mouth.</p>
+
+    <article>
+      <h2 style="font-size: 19px;">Heading: Lorem ipsum dolor sit amet</h2>
+
+      <p><i>Even the all-powerful Pointing has no control about the blind texts it is an almost
+      unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
+      decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so,
+      because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but
+      the Little Blind Text didn't listen. She packed her seven versalia, put her initial into the
+      belt and made herself on the way.</i></p>
+
+      <p>When she reached the first hills of the Italic Mountains, she had a last view back on the
+      skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of
+      her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she
+      continued her way. On her way she met a copy. <a href="#" style="color: black;"><b>Read more...</b></a></p>
+    </article>
+
+    <article>
+      <h2 style="font-size: 18px;">Heading: Lorem ipsum dolor sit amet</h2>
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Corporis deserunt recusandae sunt aut odio non nulla</li>
+        <li>In nam iure assumenda et, totam, quasi atque quam,<br>excepturi</li>
+        <li>Laborum nulla sed consectetur repudiandae vitae</li>
+        <li>Odio placeat deserunt blanditiis</li>
+      </ul>
+      <p>
+        <audio controls style="width:280px; height:60px; margin:8px 8px 8px 23px;"><source src="#" type="audio/mpeg" /></audio>
+        <small style="padding-left:15px;">Audio 1: Lorem ipsum dolor sit amet</small>
+      </p>
+    </article>
+
+    <article>
+      <h2 style="font-size: 17px;">Heading: Lorem ipsum dolor sit amet</h2>
+      <ol>
+        <li>Architecto eligendi ea veniam modi laboriosam doloremque</li>
+        <li>Nostrum illo magnam qui ullam officia libero blanditiis
+          <ol type="a">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Corporis deserunt recusandae sunt aut odio non nulla</li>
+            <li>In nam iure assumenda et, totam, quasi atque quam, excepturi</li>
+            <li>Laborum nulla sed consectetur repudiandae vitae</li>
+            <li>Odio placeat deserunt blanditiis</li>
+          </ol>
+        </li>
+        <li>Totam numquam magnam voluptatem</li>
+        <li>ariatur cumque voluptatibus necessitatibus quae nemo explicabo<br>voluptas</li>
+        <li>Quae dicta repellat molestias tempore obcaecati</li>
+      </ol>
+      <select>
+        <option>Architecto eligendi ea veniam modi laboriosam doloremque</option>
+        <option>Lorem ipsum dolor</option>
+        <option>Possimus neque error optio perspiciatis aspernatur fugit</option>
+      </select>
+      <p><small>ariatur cumque voluptatibus necessitatibus quae nemo<br>explicabvoluptas</small></p>
+    </article>
+
+    <article>
+      <h2 style="font-size: 15px;">Heading: Image and text side by side - Price: <span class="red">€500.00</span> €250.00</h2>
+      <table>
+        <tr>
+          <td><img src="image1.png" alt="Mountain landscape" width="100%" /></td>
+          <td>Vokalia and Consonantia, there live the blind.</td>
+        </tr>
+      </table>
+    </article>
+
+    <article>
+      <h2 style="font-size: 14px;">Heading: Video and text side by side</h2>
+      <table>
+        <tr>
+          <td>Vokalia and Consonantia, there live the blind. video version</td>
+          <td>
+            <video controls poster="poster1.png" width="100%">
+              <source src="video1.mp4" type="video/mp4" />
+            </video>
+          </td>
+        </tr>
+      </table>
+    </article>
+
+  </main>
+
+  <footer>
+    <hr class="line2">
+    <p>© Copyright. End of my first project</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Assignment 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat';
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+    }
+
+    hr {
+      border-top: 2px solid black;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 570px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+
+    caption {
+      font-weight: 700;
+      font-size: 12px;
+      border: 1px solid #aaa;
+      border-bottom: none;
+      padding: 8px;
+    }
+
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    th {
+      font-weight: 700;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      margin: 14px 0;
+    }
+
+    .click-button {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      background: #3a3a3a;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      cursor: pointer;
+    }
+
+    .avatar {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      margin-left: -12px;
+      border: 2px solid #fff;
+    }
+
+    dialog {
+      font-family: 'Montserrat';
+      font-size: 14px;
+      border: 2px solid black;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      margin:0;
+      transform: translate(-50%, -50%);
+      position: fixed;
+    }
+
+    dialog button {
+      font-family: 'Montserrat';
+      background: #3a3a3a;
+      color: white;
+      margin-top: 20px;
+      padding-bottom: 12px;
+      cursor: pointer;
+    }
+
+    footer p {
+      font-size: 13px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTML Learning</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <hr />
+
+  <main>
+    <h2>Playing HTML Table</h2>
+    <hr>
+
+    <table>
+      <caption>Grocery Items Bill</caption>
+      <thead>
+        <tr>
+          <th style="width: 55%;">Item Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Potatoes</td>
+          <td>50</td>
+          <td>NRS. 500.00</td>
+        </tr>
+        <tr>
+          <td>Nuts and other stuffs</td>
+          <td>100</td>
+          <td>NRS. 1400.00</td>
+        </tr>
+        <tr>
+          <td>Green and Red Onions</td>
+          <td>30</td>
+          <td>NRS. 2500.00</td>
+        </tr>
+        <tr>
+          <td colspan="2">Total Price:</td>
+          <td>NRS. 3400.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <caption>Seminar</caption>
+      <thead>
+        <tr>
+          <th style="width: 33%; text-align: center;">Day</th>
+          <th colspan="2" style="text-align: center;">Schedule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2" style="text-align: center;">Monday</td>
+          <td style="text-align: center;">07:00AM</td>
+          <td style="text-align: center;">11:00AM</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">4:00PM</td>
+          <td style="text-align: center;">08:00PM</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="text-align: center;">Tuesday</td>
+          <td style="text-align: center;">06:00AM</td>
+          <td style="text-align: center;">10:00AM</td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">03:00AM</td>
+          <td style="text-align: center;">11:00AM</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <div class="button">
+      <button command="show-modal" commandfor="dialog-work" class="click-button">Click Me!</button>
+    </div>
+
+  </main>
+
+  <hr />
+
+  <footer>
+    <p>© Copyright. End of my first project</p>
+  </footer>
+
+  <dialog id="dialog-work">
+    <p>You clicked the button. Congrats!!</p>
+    <button commandfor="dialog-work" command="close">Close</button>
+  </dialog>
+
+</body>
+</html>
