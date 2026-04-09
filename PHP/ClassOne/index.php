@@ -3,8 +3,8 @@ $name = "";
 $age = "";
 $color = "";
 $hobbies = [];
-$error = "";
-$submit = false;
+$err = "";
+$submission = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
@@ -15,15 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($name == "") {
-        $error = "Name can not be left empty.";
-    } elseif (!is_numeric($age)) {
-        $error = "Age must be a number.";
+        $err = "Name can not be left empty.";
     } elseif ($color == "") {
-        $error = "Favourite color can not be empty.";
+        $err = "Favourite color can not be empty.";
+    } elseif ($age == ""){ 
+        $err = "Age can not be left empty."; 
     } elseif (count($hobbies) == 0) {
-        $error = "Please select at least one hobby.";
+        $err = "Please select at least one hobby.";
     } else {
-        $submit = true;
+        $submission = true; 
     }
 }
 ?>
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border: 0.5px solid gray;
             border-radius: 1%; 
             box-shadow: 5px 10px 10px #36453B;
-            margin: auto;
+            margin: 100px 500px 100px 500px;
         }
         input[type="text"], input[type="number"] {
             width: 95%;
@@ -56,14 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="box">
 <?php
-if ($submit) {
+if ($submission) {
     echo "<h1 style='color: #606D5D; display: inline-block;'>Your</h1> <h1 style='color: #BC9CB0; display: inline-block;'>Result</h1>";
     echo "<p>Hello, " . $name . "!</p>";
 
     if ($age >= 18) {
-        echo "<p>You are an adult.</p>";
+        echo "<p>You are adult.</p>";
     } else {
-        echo "<p>You are a minor.</p>";
+        echo "<p>You are a minor.</p>"; 
     }
 
     switch ($color) {
@@ -82,8 +82,8 @@ if ($submit) {
 
     echo "<p>Hobbies: ";
     $list = "";
-    foreach ($hobbies as $item) {
-        $list .= $item . ", ";
+    foreach ($hobbies as $h) {
+        $list .= $h . ", "; 
     }
     echo $list;
     echo "</p>";
@@ -92,14 +92,14 @@ if ($submit) {
     for ($i = 1; $i <= $age; $i++) {
         echo "<p>" . $i . "</p>";
     }
-    echo "<br><a href='index.php' style='color: black;'>Go Back</a>";
+    echo "<br><a href='index.php' style='color: black;'>BACK PLEASEEE</a>";
 
 } else {
     echo "<h1 style='color: #606D5D; display: inline-block;'>Info</h1> <h1 style='color: #BC9CB0; display: inline-block;'>Form</h1>";
 
-    if ($error != "") {
-        echo "<p style='color:rgb(193, 70, 70);'>" . $error . "</p>";
-    }
+    if ($err != "") {
+        echo "<p style='color:rgb(193, 70, 70);'>" . $err . "</p>";
+    } 
 
     echo "<form method='POST' action='index.php'>";
     echo "<label>Name:</label><br>";
@@ -109,11 +109,11 @@ if ($submit) {
     echo "<input type='number' name='age' value='" . $age . "'>";
 
     echo "<label>Hobbies:</label><br>";
-    echo "<input type='checkbox' name='hobbies[]' value='Reading'> Reading <br>";
+    echo "<input type='checkbox' name='hobbies[]' value='Dancing'> Dancing <br>";
     echo "<input type='checkbox' name='hobbies[]' value='Traveling'> Traveling <br>";
-    echo "<input type='checkbox' name='hobbies[]' value='Gaming'> Gaming <br>";
-    echo "<input type='checkbox' name='hobbies[]' value='Cooking'> Cooking <br>";
-    echo "<input type='checkbox' name='hobbies[]' value='Sports'> Sports <br>";
+    echo "<input type='checkbox' name='hobbies[]' value='Sleeping'> Sleeping <br>";
+    echo "<input type='checkbox' name='hobbies[]' value='Eating'> Eating <br>";
+    echo "<input type='checkbox' name='hobbies[]' value='Splitsvilla'> Watching Splitsvilla <br>";
 
     echo "<br><label>Favorite Color:</label><br>";
     echo "<input type='text' name='color' value='" . $color . "'>";
