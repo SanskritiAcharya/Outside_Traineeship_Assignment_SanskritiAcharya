@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["hobbies"])) {
         $hobbies = $_POST["hobbies"];
     }
-
     if ($name == "") {
         $err = "Name can not be left empty.";
     } elseif ($color == "") {
@@ -33,10 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>PHP Assignment 1</title>
     <style>
-        body {
-            margin-top: 80px;
-            color:#696767;
-        }
         .box {
             padding: 25px;
             width: 340px;
@@ -77,16 +72,14 @@ if ($submission) {
             echo "<p>Green represents nature.</p>";
             break;
         default:
-            echo "<p>That's an interesting choice!</p>";
+            echo "<p>" .$color. "is an interesting choice!</p>";
     }
 
     echo "<p>Hobbies: ";
-    $list = "";
-    foreach ($hobbies as $h) {
-        $list .= $h . ", "; 
+    foreach($hobbies as $h){
+        echo $h . ", ";
     }
-    echo $list;
-    echo "</p>";
+    echo "</p>"; 
 
     echo "<p>Here is a list of the years you have lived:</p>";
     for ($i = 1; $i <= $age; $i++) {
