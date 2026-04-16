@@ -78,7 +78,6 @@ if (isset($_POST['num'])) {
     }
 }
 ?>
-
 <html>
 <body>
 <h2>Roman Calculator</h2>
