@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Class One Task 2</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    .container {
+      max-width: 1290px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .top-one {
+        background: #3a3a3a;
+        color: #fff; 
+    }
+    .navbar {
+        background: #e0d8ea;
+        color: #333; 
+    }
+    .left-one {
+        background: #e6e6e6;
+        color: #000; 
+    }
+    .main-one {
+        background: #d9d9d9; 
+        color: #000; 
+    }
+    .right-one {
+        background: #755e7b;
+        color: #fff; 
+    }
+    .bottom-one {
+        background: #3a3a3a;
+        color: #fff; 
+    }
+    .top-one, .navbar, .left-one, .main-one, .right-one, .bottom-one {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    .grid-make {
+      display: grid;
+      grid-template-columns: 300fr 630fr 300fr;
+      grid-template-rows: 100px 50px 1fr 100px;
+      grid-template-areas:
+        "top-one    top-one      top-one"
+        "left-one  navbar      right-one"
+        "left-one  main-one right-one"
+        "bottom-one bottom-one   bottom-one";
+      min-height: 100vh;
+      gap: 8px;
+    }
+    .top-one {
+        grid-area: top-one; 
+    }
+    .navbar { 
+        grid-area: navbar; 
+    }
+    .left-one { 
+        grid-area: left-one; 
+    }
+    .main-one { 
+        grid-area: main-one; 
+    }
+    .right-one { 
+        grid-area: right-one; 
+    }
+    .bottom-one { 
+        grid-area: bottom-one; 
+    }
+
+    @media (max-width: 768px) {
+      .grid-make {
+        grid-template-columns: 210px 1fr 210px;
+        grid-template-rows: 100px 50px 1fr 100px;
+        grid-template-areas:
+          "top-one    top-one      top-one"
+          "navbar    navbar      navbar"
+          "left-one  main-one main-one"
+          "bottom-one bottom-one   right-one";
+        min-height: 100vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-make {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 598px 50px 50px 50px;
+        grid-template-areas:
+          "top-one"
+          "navbar"
+          "main-one"
+          "right-one"
+          "left-one"
+          "bottom-one";
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-make">
+      <div class="top-one">Header</div>
+      <div class="navbar">Navigation</div>
+      <div class="left-one">Sidebar Left</div>
+      <div class="main-one">Main</div>
+      <div class="right-one">Sidebar Right</div>
+      <div class="bottom-one">Footer</div>
+    </div>
+  </div>
+</body>
+</html>

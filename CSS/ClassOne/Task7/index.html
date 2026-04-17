@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SS Class One Task 7</title>
+  <style>
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    section {
+      border: 4px solid black;
+      padding: 30px;
+    }
+
+    .labels {
+      display: grid;
+      grid-template-columns: 30px repeat(8, 70px) 30px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 4px 0;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 30px repeat(8, 70px) 30px;
+      align-items: center;
+    }
+
+    .row span {
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .square {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: brightness(0.7);
+      cursor: pointer;
+    }
+
+    .square:hover {
+      background-color: #f0c040 !important;
+      filter: brightness(1);
+    }
+
+    .light {
+      background-color: #aaaaaa;
+    }
+
+    .dark {
+      background-color: #000000;
+    }
+
+    .square:has(img) {
+      filter: brightness(1);
+      background-color: white !important;
+    }
+
+    .square img {
+      width: 54px;
+      height: 54px;
+    }
+
+  </style>
+</head>
+<body>
+
+<section>
+
+  <div class="labels">
+    <span></span>
+    <span>A</span><span>B</span><span>C</span><span>D</span>
+    <span>E</span><span>F</span><span>G</span><span>H</span>
+    <span></span>
+  </div>
+
+  <div class="row">
+    <span>8</span>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark">
+      <img src="king.png" alt="Black King" />
+    </div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <span>8</span>
+  </div>
+
+  <div class="row">
+    <span>7</span>
+    <div class="square light"></div>
+    <div class="square dark">
+      <img src="knight.png" alt="Black Knight" />
+    </div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <span>7</span>
+  </div>
+
+  <div class="row">
+    <span>6</span>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <span>6</span>
+  </div>
+
+  <div class="row">
+    <span>5</span>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <span>5</span>
+  </div>
+
+  <div class="row">
+    <span>4</span>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <span>4</span>
+  </div>
+
+  <div class="row">
+    <span>3</span>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <span>3</span>
+  </div>
+
+  <div class="row">
+    <span>2</span>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <span>2</span>
+  </div>
+
+  <div class="row">
+    <span>1</span>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <div class="square light"></div>
+    <div class="square dark"></div>
+    <span>1</span>
+  </div>
+
+  <div class="labels">
+    <span></span>
+    <span>A</span><span>B</span><span>C</span><span>D</span>
+    <span>E</span><span>F</span><span>G</span><span>H</span>
+    <span></span>
+  </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Class One Task 5</title>
+  <style>
+    body {
+      padding: 40px;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+    .task {
+      text-align: center;
+    }
+    .box {
+      width: 200px;
+      height: 60px;
+      color: white;
+      padding:20px;
+      transition: all 0.5s ease;
+    }
+    .one {
+      background: blue;
+    } 
+    .one:hover {
+      display: none;
+    }
+    .two {
+      background: green;
+    }
+    .two:hover {
+      visibility: hidden;
+    }
+    .three {
+      background: orange;
+    } 
+    .three:hover {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="task">
+      <div class="box one">display: none</div>
+        <p>Element is removed completely and also no space remains.</p>
+    </div>
+
+    <div class="task">
+      <div class="box two">visibility: hidden</div>
+        <p>Element becomes invisible but space is there.</p>
+    </div>
+    
+    <div class="task"> 
+      <div class="box three">opacity: 0</div>
+        <p>Element becomes transparent but is clickable.</p>
+    </div>
+  </div>
+</body>
+</html>
