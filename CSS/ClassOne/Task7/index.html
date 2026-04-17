@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SS Class One Task 7</title>
+  <title>CSS Class One Task 6</title>
   <style>
 
     body {
@@ -18,7 +18,59 @@
       padding: 30px;
     }
 
-    .labels {
+    .myrow {
+      display: grid;
+      grid-template-columns: 30px repeat(8, 70px) 30px;
+      align-items: center;
+    }
+
+    .myrow::before {
+      content: attr(data-num);
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .myrow::after {
+      content: attr(data-num);
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .mybox {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.5;
+    }
+
+    .mybox:has(img) {
+      opacity: 1;
+      background-color: white ;
+    }
+
+    .mybox:hover {
+      background-color: #f0c040;
+      opacity: 1;
+    }
+
+    .lightcolor {
+      background-color: #aaaaaa;
+    }
+
+    .darkcolor {
+      background-color: #000000;
+    }
+
+    .mybox img {
+      width: 54px;
+      height: 54px;
+    }
+
+    .letterrow {
       display: grid;
       grid-template-columns: 30px repeat(8, 70px) 30px;
       text-align: center;
@@ -27,173 +79,112 @@
       margin: 4px 0;
     }
 
-    .row {
-      display: grid;
-      grid-template-columns: 30px repeat(8, 70px) 30px;
-      align-items: center;
-    }
-
-    .row span {
-      text-align: center;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .square {
-      width: 70px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      filter: brightness(0.7);
-      cursor: pointer;
-    }
-
-    .square:hover {
-      background-color: #f0c040 !important;
-      filter: brightness(1);
-    }
-
-    .light {
-      background-color: #aaaaaa;
-    }
-
-    .dark {
-      background-color: #000000;
-    }
-
-    .square:has(img) {
-      filter: brightness(1);
-      background-color: white !important;
-    }
-
-    .square img {
-      width: 54px;
-      height: 54px;
-    }
-
   </style>
 </head>
 <body>
 
 <section>
 
-  <div class="labels">
+  <div class="letterrow">
     <span></span>
     <span>A</span><span>B</span><span>C</span><span>D</span>
     <span>E</span><span>F</span><span>G</span><span>H</span>
     <span></span>
   </div>
 
-  <div class="row">
-    <span>8</span>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark">
-      <img src="king.png" alt="Black King" />
+  <div class="myrow" data-num="8">
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor">
+      <img src="king.png" alt="king" />
     </div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <span>8</span>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
   </div>
 
-  <div class="row">
-    <span>7</span>
-    <div class="square light"></div>
-    <div class="square dark">
-      <img src="knight.png" alt="Black Knight" />
+  <div class="myrow" data-num="7">
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor">
+      <img src="knight.png" alt="Knight" />
     </div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <span>7</span>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
   </div>
 
-  <div class="row">
-    <span>6</span>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <span>6</span>
+  <div class="myrow" data-num="6">
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
   </div>
 
-  <div class="row">
-    <span>5</span>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <span>5</span>
+  <div class="myrow" data-num="5">
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
   </div>
 
-  <div class="row">
-    <span>4</span>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <span>4</span>
+  <div class="myrow" data-num="4">
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
   </div>
 
-  <div class="row">
-    <span>3</span>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <span>3</span>
+  <div class="myrow" data-num="3">
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
   </div>
 
-  <div class="row">
-    <span>2</span>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <span>2</span>
+  <div class="myrow" data-num="2">
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
   </div>
 
-  <div class="row">
-    <span>1</span>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <div class="square light"></div>
-    <div class="square dark"></div>
-    <span>1</span>
+  <div class="myrow" data-num="1">
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
+    <div class="mybox lightcolor"></div>
+    <div class="mybox darkcolor"></div>
   </div>
 
-  <div class="labels">
+  <div class="letterrow">
     <span></span>
     <span>A</span><span>B</span><span>C</span><span>D</span>
     <span>E</span><span>F</span><span>G</span><span>H</span>
