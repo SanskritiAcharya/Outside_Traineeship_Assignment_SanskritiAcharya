@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Class Two Task 12</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Inder&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #dde4e8;
+      --white: #ffffff;
+      --blue-light: #7dd6e8;
+      --blue: #2aaacf;
+      --gray-text: #555555;
+      --gray-small: #aaaaaa;
+      --gray-bar: #d8d8d8;
+    }
+    * {
+      margin: 0;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg-color);
+    }
+    main {
+      width: 600px;
+      padding: 20px;
+      margin: auto;
+    }
+    .plan-list {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    article {
+      flex: 1;
+      background: var(--white);
+      border-radius: 8px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    article:hover {
+      transform: scale(1.08);
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    header {
+      background: var(--blue-light);
+      padding: 14px;
+    }
+    article:hover header {
+      background: var(--blue);
+    }
+
+    header h2 {
+      font-size: 18px;
+      color: var(--white);
+    }
+    .plan-info {
+      padding: 16px 12px;
+    }
+    .price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 42px;
+      color: var(--gray-text);
+    }
+    article:hover .price {
+      color: var(--blue);
+    }
+    .per-month {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--gray-text);
+      margin-bottom: 12px;
+    }
+
+    article:hover .per-month {
+      color: var(--blue);
+    }
+    .small-text {
+      font-size: 11px;
+      color: var(--gray-small);
+      line-height: 1.8;
+    }
+    .progress-box {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 20px 25px;
+    }
+    .progress-row {
+      margin-bottom: 18px;
+    }
+    .name-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--gray-text);
+    }
+    .bar-bg {
+      background: var(--gray-bar);
+      border-radius: 6px;
+      height: 8px;
+    }
+    .bar-fill {
+      height: 8px;
+      border-radius: 6px;
+      background: var(--blue);
+      width: 0%;
+      transition: width 0.6s ease;
+    }
+    main:has(article:nth-child(1):hover) .users {
+      width: 10%;
+    }
+    main:has(article:nth-child(1):hover) .storage {
+      width: 30%;
+    }
+    main:has(article:nth-child(1):hover) .project {
+      width: 5%;
+    }
+
+    main:has(article:nth-child(2):hover) .users {
+      width: 35%;
+    }
+    main:has(article:nth-child(2):hover) .storage {
+      width: 50%;
+    }
+    main:has(article:nth-child(2):hover) .project {
+      width: 20%;
+    }
+
+    main:has(article:nth-child(3):hover) .users {
+      width: 70%;
+    }
+    main:has(article:nth-child(3):hover) .storage {
+      width: 85%;
+    }
+    main:has(article:nth-child(3):hover) .project {
+      width: 55%;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <section class="plan-list">
+
+    <article>
+      <header><h2>Basic</h2></header>
+      <div class="plan-info">
+        <p class="price">$5</p>
+        <p class="per-month">per month</p>
+        <p class="small-text">All features and resources<br>Additional support<br>50 Audio and video calls</p>
+      </div>
+    </article>
+
+    <article>
+      <header><h2>Pro</h2></header>
+      <div class="plan-info">
+        <p class="price">$10</p>
+        <p class="per-month">per month</p>
+        <p class="small-text">Vat Features<br>Mailing Address<br>150 Audio and video calls<br>Additional security features</p>
+      </div>
+    </article>
+
+    <article>
+      <header><h2>Premium</h2></header>
+      <div class="plan-info">
+        <p class="price">$20</p>
+        <p class="per-month">per month</p>
+        <p class="small-text">All features and resources<br>Vat and security features<br>Unlimited Audio and video calls</p>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="progress-box">
+    <div class="progress-row">
+      <div class="name-row"><span>5 Users</span><span>100 Users</span></div>
+      <div class="bar-bg"><div class="bar-fill users"></div></div>
+    </div>
+    <div class="progress-row">
+      <div class="name-row"><span>20 GB</span><span>200 GB</span></div>
+      <div class="bar-bg"><div class="bar-fill storage"></div></div>
+    </div>
+    <div class="progress-row">
+      <div class="name-row"><span>1 Project</span><span>50 Projects</span></div>
+      <div class="bar-bg"><div class="bar-fill project"></div></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Class Two Task 13</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;      
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: orange;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .bio-card {
+      display: flex;
+      width: 580px;
+      height: 520px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 15px 17px 20px 5px #00000038;
+      overflow: hidden;
+    }
+    .bio-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .pic-ring {
+      position: relative;
+      width: 110px;
+      height: 110px;
+    }
+    .pic-ring::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 3px solid #7C6957;
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+
+    .pic-ring::after {
+      content: '';
+      position: absolute;
+      inset: -11px;
+      border-radius: 50%;
+      border: 2px dashed #F5E8DF;
+      border-bottom-color: transparent;
+    }
+    .pic-ring:hover::before {
+      animation: spin 1.2s linear infinite;
+    }
+
+    .pic-ring:hover::after {
+      animation: spin-back 1.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spin-back {
+      to { transform: rotate(-360deg); }
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #7C6957;
+      object-fit: cover;
+    }
+    .person-name {
+      font-size: 26px;
+      font-weight: 600;
+      color: #4a3f35;
+    }
+    .person-job {
+      font-size: 15px;
+      color: #999;
+    }
+    .follow-btn,
+    .msg-btn {
+      width: 190px;
+      height: 46px;
+      border: 3px solid #7C6957;
+      border-radius: 50px;
+      background: #fff;
+      color: #7C6957;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .follow-btn:hover,
+    .msg-btn:hover {
+      background: #7C6957;
+      color: #fff;
+    }
+
+    .bio-right {
+      display: flex;
+      flex-direction: column;
+      width: 190px;
+      gap: 3px;
+      
+    }
+
+    .stat-block {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #F5E8DF;
+      cursor: pointer;
+      
+    }
+    .stat-block.mid-stat {
+      background: #F5E8DF;
+    }
+
+    .stat-block:hover {
+      background: #CBBFB6;
+    }
+
+    .stat-num {
+      font-size: 30px;
+      font-weight: 600;
+      color: #7C6957;
+    }
+
+    .stat-tag {
+      font-size: 16px;
+      color: #8E7E6D;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .bio-card {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+      .bio-right {
+        width: 100%;
+        flex-direction: row;
+        height: 110px;
+        margin-top:10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<article class="bio-card">
+
+  <section class="bio-left">
+    <div class="pic-ring">
+      <img class="profile-img" src="pic.png" alt="Jessica Potter" />
+    </div>
+    <h2 class="person-name">Jessica Potter</h2>
+    <p class="person-job">Visual Artist</p>
+    <button class="follow-btn">Follow</button>
+    <button class="msg-btn">Message</button>
+  </section>
+
+  <aside class="bio-right">
+    <div class="stat-block">
+      <span class="stat-num">523</span>
+      <span class="stat-tag">Posts</span>
+    </div>
+    <div class="stat-block mid-stat">
+      <span class="stat-num">1387</span>
+      <span class="stat-tag">Likes</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num">146</span>
+      <span class="stat-tag">Follower</span>
+    </div>
+  </aside>
+
+</article>
+
+</body>
+</html>
+`

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Class Two Task 11</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #main_bar {
+      margin-top: 50px;
+      margin-left: 50px;
+      width: 145px;
+      display: flex;
+      background-color: rgb(244, 241, 241);
+      padding: 18px;
+      border: 1px solid rgb(52, 52, 52);
+    }
+
+    div.div1 {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    div.div1 i {
+      font-size: 22px;
+      color: grey;
+      transition: 0.3s;
+    }
+
+    div.div1 svg {
+      color: grey;
+      transition: 0.3s;
+    }
+
+    span.imgSpan {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url('cow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: brightness(0.35);
+      transition: 0.3s;
+    }
+
+    span.tool_box {
+      position: absolute;
+      top: 40px;
+      left: -40px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 13px;
+      color: black;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+
+    span.tool_box::before {
+      content: '';
+      position: absolute;
+      bottom: 35px;
+      left: 45px;
+      border-bottom: 7px solid white;
+    }
+
+    div.div1:hover span.tool_box {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    div.icon1:hover i {
+      color: red;
+      filter: drop-shadow(0px 0px 5px red);
+    }
+
+    div.icon1:hover span.tool_box {
+      box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.4);
+    }
+
+    div.security-icon:hover svg {
+      color: blue;
+      filter: drop-shadow(0px 0px 5px blue);
+    }
+
+    div.security-icon:hover span.tool_box {
+      box-shadow: 0px 5px 15px rgba(0, 0, 255, 0.4);
+    }
+
+    div.cowpic:hover span.imgSpan {
+      opacity: 0.7;
+    }
+
+    div.cowpic:hover {
+      filter: drop-shadow(0px 0px 5px orange);
+    }
+
+    div.cowpic:hover span.tool_box {
+      box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.5);
+    }
+
+    .security-icon .tool_box {
+      top: -50px;
+    }
+
+    .security-icon .tool_box::before {
+      border-bottom: none;
+      border-top: 7px solid white;
+    }
+
+    div.div1:active::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: yellow;
+      opacity: 50%;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="main_bar">
+    <div class="div1 icon1" style="margin-left: 10px;">
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <span class="tool_box">This is DANGER tooltip!</span>
+    </div>
+
+    <div class="div1 security-icon">
+      <!-- svg code copied from internet-->
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="m9 21 1.726-2.761a8 8 0 0 0 1.06-2.671l.059-.291a8.002 8.002 0 0 0 .155-1.57V12m-9 3.5c.5-1 1-2.043 1-3.5 0-1.74.556-3.352 1.5-4.665m0 11.165c2-2 2.5-5.237 2.5-6.5a4 4 0 0 1 7.954-.61M19.5 17.5c.5-2 .5-4 .5-5.5A8 8 0 0 0 8 5.07M15.954 15c-.174 1.393-.666 3.181-1.954 5.5" />
+      </svg>
+      <span class="tool_box"> This is DANG…no no no!☺tooltip!</span>
+    </div>
+
+    <div class="div1 cowpic">
+      <span class="imgSpan"></span>
+      <span class="tool_box" style="width: 120px;">This is COW tooltip!</span>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
