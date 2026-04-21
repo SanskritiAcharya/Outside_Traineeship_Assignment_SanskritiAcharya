@@ -13,20 +13,27 @@
       padding: 10px 5px;
       font-family: Georgia, serif;
     }
+    .lists li::before {
+      content: "";
+      display: inline-block;
+      width: 25px;      
+      height: 25px;
+      background-image: url("tick.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 10px; 
+    }
     .lists li:hover {
       text-decoration: underline;
-    }
-    .lists li i{
-      font-size: 20px;
-      margin-right: 7px;
     }
   </style>
 </head>
 <body>
   <ul class="lists">
-    <li><i class="fa-solid fa-circle-check"></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-    <li><i class="fa-solid fa-circle-check"></i>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-    <li><i class="fa-solid fa-circle-check"></i>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
   </ul>
 </body>
 </html>
