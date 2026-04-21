@@ -1,82 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>W. News</title>
+    <title>CSS Class Two Task 14</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@900&display=swap"
         rel="stylesheet" />
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
-            padding: 0;
+            scroll-behavior: smooth;
         }
-
         body {
             background-color: #F5F3EE;
-            font-family: 'Inter', sans-serif;
-            color: #00001A;
+            font-family: 'Inter', sans-serif; 
         }
-
-        /* navigation */
-
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 165px 0 165px;
+            padding: 40px 165px 2px 165px;
         }
 
-        .logo {
+        .brand {
             font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-size: 2rem;
+            font-size: 40px;
             color: #00001A;
             text-decoration: none;
         }
-
-        .big-nav ul {
+        .desktop-nav ul {
             display: flex;
-            gap: 32px;
+            gap: 30px;
             list-style: none;
         }
-
-        .big-nav ul a {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 400;
-            color: #5E607A;
+        .desktop-nav ul a {
+            font-size: 15px;
+            color: gray;
             text-decoration: none;
         }
-
-        .big-nav ul a:hover {
-            color: #00001A;
-        }
-
-        .hamburger-checkbox {
+        .menu-open {
             display: none;
         }
-
-        .hamburger-button {
+        .menu-icon {
             display: none;
             flex-direction: column;
             gap: 5px;
-            cursor: pointer;
             padding: 4px;
         }
-
-        .hamburger-button span {
-            display: block;
+        .menu-icon span {
             width: 24px;
             height: 2px;
             background-color: #00001A;
         }
-
-        /* MOBILE MENU PANEL */
-        .dark-overlay {
+        .grayscreen {
             display: none;
             position: fixed;
             top: 0;
@@ -84,343 +61,258 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.35);
-            z-index: 100;
         }
-
-        .slide-menu {
+        .mobile-menu {
             position: fixed;
             top: 0;
             right: 0;
-            width: 65%;
+            width: 60%;
             height: 100%;
             background-color: #F5F3EE;
-            z-index: 200;
             padding: 28px 24px;
-            box-shadow: -6px 0 24px rgba(0, 0, 0, 0.1);
             transform: translateX(100%);
-            transition: transform 0.3s ease;
         }
-
-        .close-button {
+        .close-btn {
             display: block;
-            font-size: 1.4rem;
-            color: #00001A;
-            cursor: pointer;
+            font-size: 22px;
             text-align: right;
             margin-bottom: 40px;
-            line-height: 1;
         }
-
-        .slide-menu ul {
+        .mobile-menu ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 24px;
         }
-
-        .slide-menu ul a {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
+        .mobile-menu ul a {
+            font-size: 15px;
             color: #5E607A;
             text-decoration: none;
         }
 
-        .hamburger-checkbox:checked~.dark-overlay {
+        .menu-open:checked ~ .grayscreen {
             display: block;
         }
 
-        .hamburger-checkbox:checked~.slide-menu {
+        .menu-open:checked ~ .mobile-menu {
             transform: translateX(0);
         }
 
-
-
         main {
-            padding: 0 165px 60px 165px;
+            padding: 1px 165px 60px 165px;
         }
 
-
-        .two-columns {
+        .page-layout {
             display: flex;
-            flex-direction: row;
             align-items: flex-start;
             gap: 30px;
             margin-top: 44px;
         }
 
-        .left-side {
+        .main-col {
             flex: 730;
             min-width: 0;
             display: flex;
             flex-direction: column;
         }
-
-        .right-side {
+        .side-col {
             flex: 350;
-            min-width: 0;
         }
-
-
-
-        .big-picture {
+        .cover-img {
             width: 100%;
-            aspect-ratio: 730 / 300;
-            object-fit: cover;
-            display: block;
-            background-color: #C5C6CE;
+            height: 300px;
             background-image: url('heroimage.jpg');
             background-size: cover;
-            background-position: center;
+            
         }
-
-
-        .words-row {
+        .cover-info {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
             gap: 30px;
             padding-top: 28px;
             padding-bottom: 36px;
         }
-
-        .title-box {
+        .cover-title-insert {
             flex: 1;
             min-width: 0;
         }
-
-        .main-title {
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 56px;
+        .cover-title {
+            font-weight: 900;
+            font-size: 55px;
             line-height: 56px;
-            color: #00001A;
         }
-
-        .desc-box {
+        .cover-desc-insert {
             flex: 1;
             min-width: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
-
-        .short-desc {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
+        .cover-desc {
             font-size: 15px;
             line-height: 24px;
             letter-spacing: 0.002em;
             color: #5E607A;
         }
-
-        .red-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        .read-btn {
+            box-sizing: border-box;
+            text-align: center;
+            padding-top:15px;
             width: 185px;
             height: 48px;
             background-color: #F15E50;
             color: #FFFFFF;
-            font-family: 'Inter', sans-serif;
             font-weight: 700;
             font-size: 13px;
-            letter-spacing: 0.22em;
+            letter-spacing: 3px;
             text-transform: uppercase;
             text-decoration: none;
-            border: none;
             margin-top: 24px;
         }
-
-        .red-button:hover {
+        .read-btn:hover {
             background-color: #00001A;
         }
-
-
-
-        .three-cards {
+        
+        .article-list {
             display: flex;
-            flex-direction: row;
             gap: 30px;
             width: 80vw;
         }
-
-        .one-card {
+        .article-item {
             flex: 1;
-            min-width: 0;
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
             gap: 12px;
             cursor: pointer;
         }
-
-        .one-card img {
+        .article-item img {
             width: 100px;
             height: 127px;
             object-fit: cover;
             flex-shrink: 0;
-            background-color: #C5C6CE;
         }
-
-        .card-words {
+        .article-text {
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
-
-        .big-number {
-            font-family: 'Inter', sans-serif;
+        .article-num {
             font-weight: 700;
             font-size: 32px;
             line-height: 1;
             color: #C5C6CE;
         }
-
-        .card-heading {
-            font-family: 'Inter', sans-serif;
+        .article-title {
             font-weight: 800;
             font-size: 18px;
             line-height: 24px;
-            color: #00001A;
         }
-
-        .one-card:hover .card-heading {
+        .article-item:hover .article-title {
             color: #E9AB53;
         }
-
-        .card-small-text {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
+        .article-desc {
             font-size: 13px;
             line-height: 1.5;
             color: #5E607A;
         }
-
-
-        .dark-box {
+        .dark-panel {
+            height: 390px;
             background-color: #00001A;
             border: 1px solid #5E607A;
-            padding: 28px 24px;
+            padding: 39px 24px;
             display: flex;
             flex-direction: column;
-            width: 100%;
         }
-
-        .dark-box-top-word {
-            font-family: 'Inter', sans-serif;
+        .dark-panel-heading {
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 21px;
             color: #E9AB53;
             margin-bottom: 20px;
         }
-
-        .dark-one-story {
+        .dark-panel-item {
             padding: 18px 0;
-            border-top: 1px solid #5E607A;
             cursor: pointer;
         }
-
-        .dark-one-story:first-of-type {
-            border-top: none;
-            padding-top: 0;
+        hr{
+            border: none;
+            border-top: 0.5px solid #5E607A;;
         }
-
-        .dark-story-heading {
-            font-family: 'Inter', sans-serif;
+        .dark-panel-title {
             font-weight: 800;
-            font-size: 0.95rem;
+            font-size: 16px;
             color: #FFFFFF;
             margin-bottom: 6px;
             line-height: 1.35;
         }
-
-        .dark-one-story:hover .dark-story-heading {
+        .dark-panel-item:hover .dark-panel-title {
             color: #E9AB53;
         }
-
-        .dark-story-text {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 0.8rem;
+        .dark-panel-desc {
+            font-size: 13px;;
             color: #C5C6CE;
-            line-height: 1.55;
+            line-height: 2.55;
         }
-
-
+        .back-top {
+            position: fixed;
+            bottom: 28px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #9a8381;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            animation: design 5s ease-in-out infinite;
+        }
+        @keyframes design {
+            0%, 100% { transform:scale(0p);}
+            50%       { transform: scale(1.1); background-color: #F15E50; }
+        }
         @media (max-width: 820px) {
 
-            .hamburger-button {
+            .menu-icon {
                 display: flex;
             }
-
-            .big-nav {
+            .desktop-nav {
                 display: none;
             }
-
             header {
-                padding: 20px 20px 0 20px;
+                padding: 20px 20px 2px 20px;
             }
-
             main {
-                padding: 0 20px 50px 20px;
+                padding: 1px 20px 50px 20px;
             }
-
-            .two-columns {
+            .page-layout {
                 flex-direction: column;
                 gap: 0;
-                margin-top: 24px;
             }
-
-            .left-side,
-            .right-side {
-                flex: none;
-                width: 100%;
+            .cover-title {
+                font-size: 36px;
+                line-height: 1.1;
             }
-
-            .main-title {
-                font-size: 2rem;
-                line-height: 1.15;
-            }
-
-            .words-row {
+            .cover-info {
                 flex-direction: column;
-                gap: 14px;
-                padding-top: 20px;
-                padding-bottom: 24px;
+                gap: 15px;
             }
-
-            .title-box,
-            .desc-box {
-                flex: none;
-                width: 100%;
-            }
-
-            .three-cards {
+            .article-list {
                 flex-direction: column;
                 gap: 20px;
             }
-
-            .one-card img {
+            .article-item img {
                 width: 80px;
                 height: 80px;
             }
-
-            .right-side {
+            .side-col {
                 margin-top: 32px;
             }
-
         }
     </style>
 </head>
-
-<body>
-
-    <input type="checkbox" id="nav-toggle" class="hamburger-checkbox" />
-    <div class="dark-overlay"></div>
-
-    <nav class="slide-menu" aria-label="Mobile navigation">
-        <label for="nav-toggle" class="close-button">&#x2715;</label>
+<body id="top">
+    <input type="checkbox" id="menu-switch" class="menu-open" />
+    <div class="grayscreen"></div>
+    <nav class="mobile-menu" aria-label="Mobile navigation">
+        <label for="menu-switch" class="close-btn">&#x2715;</label>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">New</a></li>
@@ -429,11 +321,9 @@
             <li><a href="#">Categories</a></li>
         </ul>
     </nav>
-
     <header>
-        <a href="#" class="logo">W.</a>
-
-        <nav class="big-nav" aria-label="Main navigation">
+        <a href="#" class="brand">W.</a>
+        <nav class="desktop-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">New</a></li>
@@ -442,93 +332,77 @@
                 <li><a href="#">Categories</a></li>
             </ul>
         </nav>
-
-        <label for="nav-toggle" class="hamburger-button" aria-label="Open menu">
+        <label for="menu-switch" class="menu-icon">
             <span></span>
             <span></span>
             <span></span>
         </label>
     </header>
-
     <main>
-        <div class="two-columns">
+        <div class="page-layout">
+            <div class="main-col">
+                <div class="cover-img"></div>
 
-            <div class="left-side">
-
-                <div class="big-picture"></div>
-
-                <div class="words-row">
-                    <div class="title-box">
-                        <h1 class="main-title">The Bright Future of Web 3.0?</h1>
+                <div class="cover-info" style="margin-top:15px;">
+                    <div class="cover-title-insert">
+                        <h1 class="cover-title">The Bright Future of Web 3.0?</h1>
                     </div>
-                    <div class="desc-box">
-                        <p class="short-desc">We dive into the next evolution of the web that claims to put the power of
+                    <div class="cover-desc-insert">
+                        <p class="cover-desc">We dive into the next evolution of the web that claims to put the power of
                             the platforms back into the hands of the people. But is it really fulfilling its promise?
                         </p>
-                        <a href="#" class="red-button">Read More</a>
+                        <a href="#" class="read-btn">Read More</a>
                     </div>
                 </div>
-
-                <section class="three-cards" aria-label="Featured articles">
-
-                    <article class="one-card">
+                <section class="article-list" style="margin-top:20px;">
+                    <article class="article-item">
                         <img src="trainee-a.jpg" alt="Retro PCs" />
-                        <div class="card-words">
-                            <span class="big-number">01</span>
-                            <h2 class="card-heading">Reviving Retro PCs</h2>
-                            <p class="card-small-text">What happens when old PCs are given modern upgrades?</p>
+                        <div class="article-text">
+                            <span class="article-num">01</span>
+                            <h2 class="article-title">Reviving Retro PCs</h2>
+                            <p class="article-desc">What happens when old PCs are given modern upgrades?</p>
                         </div>
                     </article>
-
-                    <article class="one-card">
+                    <article class="article-item">
                         <img src="trainee-b.jpg" alt="Laptops" />
-                        <div class="card-words">
-                            <span class="big-number">02</span>
-                            <h2 class="card-heading">Top 10 Laptops of 2022</h2>
-                            <p class="card-small-text">Our best picks for various needs and budgets.</p>
+                        <div class="article-text">
+                            <span class="article-num">02</span>
+                            <h2 class="article-title">Top 10 Laptops of 2022</h2>
+                            <p class="article-desc">Our best picks for various needs and budgets.</p>
                         </div>
                     </article>
-
-                    <article class="one-card">
+                    <article class="article-item">
                         <img src="trainee-c.jpg" alt="Gaming" />
-                        <div class="card-words">
-                            <span class="big-number">03</span>
-                            <h2 class="card-heading">The Growth of Gaming</h2>
-                            <p class="card-small-text">How the pandemic has sparked fresh opportunities.</p>
+                        <div class="article-text">
+                            <span class="article-num">03</span>
+                            <h2 class="article-title">The Growth of Gaming</h2>
+                            <p class="article-desc">How the pandemic has sparked fresh opportunities.</p>
                         </div>
                     </article>
-
                 </section>
-
             </div>
-
-            <aside class="right-side">
-                <div class="dark-box">
-                    <h2 class="dark-box-top-word">New</h2>
-
-                    <article class="dark-one-story">
-                        <h3 class="dark-story-heading">Hydrogen VS Electric Cars</h3>
-                        <p class="dark-story-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
-                    </article>
-
-                    <article class="dark-one-story">
-                        <h3 class="dark-story-heading">The Downsides of AI Artistry</h3>
-                        <p class="dark-story-text">What are the possible adverse effects of on-demand AI image
+            <aside class="side-col">
+                <div class="dark-panel">
+                    <h2 class="dark-panel-heading">New</h2>
+                    <article class="dark-panel-item">
+                        <h3 class="dark-panel-title">Hydrogen VS Electric Cars</h3>
+                        <p class="dark-panel-desc">Will hydrogen-fueled cars ever catch up to EVs?</p>
+                    </article><hr>
+                    <article class="dark-panel-item">
+                        <h3 class="dark-panel-title">The Downsides of AI Artistry</h3>
+                        <p class="dark-panel-desc">What are the possible adverse effects of on-demand AI image
                             generation?</p>
-                    </article>
+                    </article><hr>
 
-                    <article class="dark-one-story">
-                        <h3 class="dark-story-heading">Is VC Funding Drying Up?</h3>
-                        <p class="dark-story-text">Private funding by VC firms is down 50% YOY. We take a look at what
+                    <article class="dark-panel-item">
+                        <h3 class="dark-panel-title">Is VC Funding Drying Up?</h3>
+                        <p class="dark-panel-desc">Private funding by VC firms is down 50% YOY. We take a look at what
                             that means.</p>
                     </article>
-
                 </div>
             </aside>
-
         </div>
     </main>
-
+    <a href="#top" class="back-top">To Top</a>
 </body>
-
 </html>
