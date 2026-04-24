@@ -11,7 +11,7 @@ async function start() {
   await person.timer(10);
   // now printing first user
   person.print(user1);
-  console.log("5 second pause...");
+  console.log("5 second pause!");
   // this just delays but doesn't actually pause code
   setTimeout(5000);
 

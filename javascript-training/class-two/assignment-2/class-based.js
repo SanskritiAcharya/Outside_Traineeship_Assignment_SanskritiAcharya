@@ -11,7 +11,7 @@ export class Identity {
 
         if (currentNumber === 0) {
           clearInterval(myInterval); // stop interval or else infinite
-          console.log("TIMES UPPPP!");
+          console.log("Time is upp!");
           countOver();
         }
         // decreasing number manually 

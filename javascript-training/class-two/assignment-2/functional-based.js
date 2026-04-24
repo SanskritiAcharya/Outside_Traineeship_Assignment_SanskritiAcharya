@@ -10,7 +10,7 @@ export const count = (t = 10, i = 1000) => {
 
       if (counter <= 0) {
         clearInterval(intervalId); // stopping again same logic
-        console.log("Time is upp");
+        console.log("Time is upp!");
         resolve();
       }
 
