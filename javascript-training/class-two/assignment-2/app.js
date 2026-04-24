@@ -15,7 +15,7 @@ async function startProgram() {
   // creating person object of class Identity
   const person = new Identity();
 
-  console.log("Class based approach");
+  console.log("Class based");
 
   await person.counting(10); // countdown method
   person.print(user1);
@@ -23,7 +23,7 @@ async function startProgram() {
   await delay(5000); //wait 5 seconds
   person.print(user2);
 
-  console.log("Function based approach");
+  console.log("Function based");
   await counting(10, 1000); // new countdown function
 
   print(user1); //differnt print function
