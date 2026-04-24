@@ -10,7 +10,7 @@ export const count = (t = 10, i = 1000) => {
 
       if (counter <= 0) {
         clearInterval(intervalId); // stopping again same logic
-        console.log("TIMES UPPP");
+        console.log("Time is upp");
         resolve();
       }
 
@@ -20,10 +20,10 @@ export const count = (t = 10, i = 1000) => {
 };
 
 export const print = (user) => {
-  const { name, ...restOfStuff } = user;
+  const { name, ...restInfo } = user;
 
   console.log(`Function approach`);
   console.log(`Hello ${name}!`);
    // rest operator basically dumping remaining properties here
-  console.log("Info:", restOfStuff);
+  console.log("Info:", restInfo);
 };

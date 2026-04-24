@@ -3,7 +3,7 @@ export class Identity {
   timer(total = 10, i = 1000) {
     console.log("Starting the countdown");
 
-    return new Promise((countdownOver) => {
+    return new Promise((countOver) => {
       let currentNumber = total;
 
       const myInterval = setInterval(() => {
@@ -12,7 +12,7 @@ export class Identity {
         if (currentNumber === 0) {
           clearInterval(myInterval); // stop interval or else infinite
           console.log("TIMES UPPPP!");
-          countdownOver();
+          countOver();
         }
         // decreasing number manually 
         currentNumber = currentNumber - 1;
