@@ -1,22 +1,35 @@
 import { Identity } from './class-based.js';
-import { print, count } from './functional-based.js';
+import { print, counting } from './functional-based.js';
 
 const user1 = { name: "Harry", age: 24, address: "Jhamsikhel", city: "Lalitpur" };
 const user2 = { name: "Ram", address: "Boudha", city: "Kathmandu" };
 
-async function start() {
-  // making object from class
-  const person = new Identity();
-  // first countdown, waiting till it finishes
-  await person.timer(10);
-  // now printing first user
-  person.print(user1);
-  console.log("5 second pause!");
-  // this just delays but doesn't actually pause code
-  setTimeout(5000);
+async function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
 
-  await count(5, 500);
+async function startProgram() {
+
+  // creating person object of class Identity
+  const person = new Identity();
+
+  console.log("Class based approach");
+
+  await person.counting(10); // countdown method
+  person.print(user1);
+
+  await delay(5000); //wait 5 seconds
+  person.print(user2);
+
+  console.log("Function based approach");
+  await counting(10, 1000); // new countdown function
+
+  print(user1); //differnt print function
+
+  await delay(5000);
   print(user2);
 }
 
-start();
+startProgram();

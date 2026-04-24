@@ -1,29 +1,21 @@
-// countdown function but in arrow style
-export const count = (t = 10, i = 1000) => {
-  console.log("starting countdown...");
-
+export const counting = (total = 10, i = 1000) => { 
   return new Promise((resolve) => {
-    let counter = t;
+    let currentNumber = total;
+    //using setInterval for the countdown
+    const myInterval = setInterval(() => {
+      console.log(`${currentNumber}`);
 
-    const intervalId = setInterval(() => {
-      console.log(`${counter}`);
-
-      if (counter <= 0) {
-        clearInterval(intervalId); // stopping again same logic
-        console.log("Time is upp!");
+      if (currentNumber === 0) {
+        clearInterval(myInterval);
         resolve();
       }
-
-      counter = counter - 1; // decreasing step by step
+      currentNumber = currentNumber - 1;
     }, i);
   });
 };
 
 export const print = (user) => {
+  // using template literals + rest operator for formatted logging
   const { name, ...restInfo } = user;
-
-  console.log(`Function approach`);
-  console.log(`Hello ${name}!`);
-   // rest operator basically dumping remaining properties here
-  console.log("Info:", restInfo);
+  console.log(`Hello ${user.name}, your info :`, restInfo);
 };

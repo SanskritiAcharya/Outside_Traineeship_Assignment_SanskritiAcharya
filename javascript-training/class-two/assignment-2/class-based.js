@@ -1,28 +1,25 @@
 export class Identity {
-  // timer function with default values 
-  timer(total = 10, i = 1000) {
-    console.log("Starting the countdown");
 
-    return new Promise((countOver) => {
+  counting(total = 10, i = 1000) {
+    return new Promise((resolve) => {
       let currentNumber = total;
 
+      // using set interval to print current number at intervals
       const myInterval = setInterval(() => {
-        console.log(`${currentNumber}`); // printing number like countdown
+        console.log(`${currentNumber}`);
 
         if (currentNumber === 0) {
-          clearInterval(myInterval); // stop interval or else infinite
-          console.log("Time is upp!");
-          countOver();
+          clearInterval(myInterval);
+          resolve();
         }
-        // decreasing number manually 
         currentNumber = currentNumber - 1;
-      }, i);
+      }, i); 
     });
   }
 
   print(user) {
-    console.log(`Class approach`);
-    // directly using object properties
-    console.log(`Hello ${user.name}, how are you ? Are you ${user.age}? & live in ${user.address}, ${user.city}?`);
+    // using the rest operator to extract additional info besides name
+    const { name, ...restInfo } = user;
+    console.log(`Hello ${user.name}, your info :`, restInfo);
   }
 }
