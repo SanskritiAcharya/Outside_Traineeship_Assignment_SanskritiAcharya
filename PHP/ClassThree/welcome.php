@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -11,14 +10,15 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <title>Welcome</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 60px auto; max-width: 350px; }
+        body { 
+            margin: 60px auto; 
+            max-width: 350px; 
+        }
     </style>
 </head>
 <body>
-
-    <h2>Welcome, <?php echo $_SESSION['username']; ?>!</h2>
+    <h2>Welcome, <?php echo $_SESSION['username']; ?></h2>
     <p>You are logged in.</p>
     <a href="logout.php">Logout</a>
-
 </body>
 </html>
