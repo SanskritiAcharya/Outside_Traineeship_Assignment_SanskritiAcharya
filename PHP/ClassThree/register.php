@@ -1,33 +1,23 @@
 <?php
 session_start();
-include 'db.php';
-
+include 'database.php';
 if (isset($_SESSION['user_id'])) {
     header("Location: welcome.php");
     exit();
 }
-
 $myError = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $myUsername = $_POST['username'];
     $myPassword = $_POST['password'];
-
     if (empty($myUsername) || empty($myPassword)) {
         $myError = "Please fill in all the fields!";
     } else {
-
         $isUsernameTaken = mysqli_query($myConnection, "SELECT * FROM users WHERE username = '$myUsername'");
-
         if (mysqli_num_rows($isUsernameTaken) > 0) {
             $myError = "Sorry, that username is already taken. Try a different one!";
         } else {
-
             $myHashedPassword = password_hash($myPassword, PASSWORD_DEFAULT);
-
             $addToDatabase = mysqli_query($myConnection, "INSERT INTO users (username, password) VALUES ('$myUsername', '$myHashedPassword')");
-
             if ($addToDatabase) {
                 header("Location: login.php");
                 exit();
@@ -67,9 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
-
     <h2>Register</h2>
-
     <?php if ($myError != "") { ?>
         <p class="myError"><?php echo $myError; ?></p>
     <?php } ?>
@@ -85,6 +73,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
     <p>Already have an account? <a href="login.php">Login here</a></p>
-
 </body>
 </html>
