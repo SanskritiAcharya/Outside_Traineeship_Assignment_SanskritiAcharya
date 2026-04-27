@@ -24,7 +24,7 @@ Go: `http://localhost/folder-name/register.php`
 
 ## Files
 
-- `db.php` — Database connection
+- `database.php` — Database connection
 - `register.php` — Registration page
 - `login.php` — Login page
 - `welcome.php` — Protected welcome page
