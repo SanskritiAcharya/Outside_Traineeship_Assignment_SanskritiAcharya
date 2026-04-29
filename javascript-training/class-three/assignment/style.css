@@ -1,0 +1,159 @@
+body {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    background-color: #d6dde8;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+
+  #search-box {
+    display: flex;
+    align-items: center;
+    background: #e8eaed;
+    border: 2px solid #888;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+  }
+  
+  #search-box i {
+    margin-right: 8px;
+    font-size: 15px;
+  }
+  
+  #search {
+    flex: 1;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  #add-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    border: 2px solid #888;
+    background: #e8eaed;
+  }
+  
+  #add-section i {
+    margin: 0 8px 0 10px;
+    font-size: 15px;
+  }
+  
+  #new-item {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  
+  #add-section button {
+    padding: 10px 14px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #a0a8b4;
+    border: none;
+    border-left: 2px solid #888;
+    font-weight: bold;
+    align-self: stretch;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+    text-align: left;
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border: 2px dashed #aaa;
+    background: #b8bfc9;
+  }
+  
+  /* REMOVE button inside each list item */
+  ul li button {
+    padding: 4px 10px;
+    cursor: pointer;
+    background: #9aa5b4;
+    border: 2px solid #7a8898;
+    font-weight: bold;
+  }
+  
+  /* Hidden by default, shown when no search results match */
+  #empty-message {
+    display: none;
+    text-align: left;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  
+  /* Clear all button spans full width */
+  #clear-all {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #9aa5b4;
+    border: 2px solid #7a8898;
+    font-weight: bold;
+  }
+  
+  #clear-all:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Toast is fixed at the top-right corner with a gray box style */
+  #toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #c8cdd5;
+    border: 2px solid #9aa5b4;
+    padding: 10px 16px;
+    font-size: 14px;
+    display: none;
+  }
+  
+  /* Modal background covers the whole screen */
+  #modal-bg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  #modal {
+    background: white;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #aaa;
+  }
+  
+  /* Close button is positioned at top-right of the modal */
+  #modal button {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div id="modal-bg">
+    <div id="modal">
+      <button>&#x2715;</button>
+      <h2>Welcome to our<br>List Manager</h2>
+    </div>
+  </div>
+
+  <!-- Status message shown at top-right after actions -->
+  <div id="toast"></div>
+
+  <h1>'LIST MANAGER'</h1>
+  <p>TOTAL ITEMS: <span id="total">0</span></p>
+
+  <!-- Search bar with icon inside -->
+  <div id="search-box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="search" placeholder="Search items..." />
+  </div>
+
+  <!-- Input and button to add a new item -->
+  <div id="add-section">
+    <i class="fa-regular fa-rectangle-list"></i>
+    <input type="text" id="new-item" placeholder="Enter new item..." />
+    <button>ADD ITEM</button>
+  </div>
+
+  <!-- List items will be added here dynamically -->
+  <ul id="list"></ul>
+  <p id="empty-message">No results found.</p>
+
+  <button id="clear-all" disabled>CLEAR ALL ITEMS</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
