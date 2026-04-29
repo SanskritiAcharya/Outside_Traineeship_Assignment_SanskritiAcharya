@@ -1,5 +1,6 @@
-const modalBg      = document.getElementById('modal-bg');
+// Grabbing all the elements we need from the HTML
 const modal        = document.getElementById('modal');
+const modalClose   = document.getElementById('modal-close');
 const toast        = document.getElementById('toast');
 const itemCountEl  = document.getElementById('total');
 const search       = document.getElementById('search');
@@ -9,18 +10,18 @@ const list         = document.getElementById('list');
 const clearAll     = document.getElementById('clear-all');
 const emptyMessage = document.getElementById('empty-message');
 
-// Shows the welcome modal 1 second after the page loads
+// Show the welcome modal 1 second after the page loads
 window.addEventListener('load', function() {
   setTimeout(function() {
-    modalBg.style.display = 'flex';
+    modal.style.display = 'flex';
   }, 1000);
 }, { 
   once: true 
 });
 
 // Hide the modal when the close button is clicked
-modal.querySelector('button').addEventListener('click', function() {
-  modalBg.style.display = 'none';
+modalClose.addEventListener('click', function() {
+  modal.style.display = 'none';
 });
 
 // Timer variable used to clear the previous toast before showing a new one
@@ -36,7 +37,7 @@ function showMessage(msg) {
   }, 2000);
 }
 
-// Counts all li elements and updates the total, also disables clear button if list is empty
+// Counts all li elements and updates the total
 function updateTotal() {
   const total = list.querySelectorAll('li').length;
   itemCountEl.textContent = total;
@@ -46,12 +47,13 @@ function updateTotal() {
 // Runs when ADD ITEM button is clicked
 addBtn.addEventListener('click', function() {
   const text = newItem.value.trim();
+
   // Stop if the input is empty
-  if (!text){
+  if (!text) {
     return;
   }
 
-  // Create a new list item with the text and a remove button
+  // Create a new list item with the item text and a remove button
   const li = document.createElement('li');
   const span = document.createElement('span');
   span.textContent = text;
@@ -69,7 +71,6 @@ addBtn.addEventListener('click', function() {
 });
 
 // Listening for clicks on the whole list (event delegation)
-// This way we don't need a separate listener on each remove button
 list.addEventListener('click', function(e) {
   if (e.target.dataset.action === 'remove') {
     e.target.parentElement.remove();
@@ -81,13 +82,17 @@ list.addEventListener('click', function(e) {
 // Change background color of an item when mouse enters (event delegation)
 list.addEventListener('mouseover', function(e) {
   const li = e.target.closest('li');
-  if (li) li.style.background = '#c8c8c8';
+  if (li) {
+    li.style.background = '#c8c8c8';
+  }
 });
 
 // Restore background color when mouse leaves (event delegation)
 list.addEventListener('mouseout', function(e) {
   const li = e.target.closest('li');
-  if (li) li.style.background = '#b8bfc9';
+  if (li) {
+    li.style.background = '#b8bfc9';
+  }
 });
 
 // Remove all items when Clear All is clicked
@@ -111,20 +116,20 @@ function waitThenRun(fn, delay) {
 search.addEventListener('input', waitThenRun(function() {
   const term = search.value.trim().toLowerCase();
   const items = list.querySelectorAll('li');
-  let visible = 0;
+  let matchCount = 0;
 
   items.forEach(function(li) {
     const text = li.querySelector('span').textContent.toLowerCase();
     if (text.includes(term)) {
       li.style.display = '';
-      visible++;
+      matchCount++;
     } else {
       li.style.display = 'none';
     }
   });
 
   // Show No results found only if there are items but none match the search
-  if (items.length > 0 && visible === 0) {
+  if (items.length > 0 && matchCount === 0) {
     emptyMessage.style.display = 'block';
   } else {
     emptyMessage.style.display = 'none';
