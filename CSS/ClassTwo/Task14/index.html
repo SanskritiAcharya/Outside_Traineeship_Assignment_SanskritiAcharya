@@ -3,406 +3,122 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Class Two Task 14</title>
+    <title>CSS Task 14- CSS Methodologies</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@900&display=swap"
         rel="stylesheet" />
-    <style>
-        * {
-            margin: 0;
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #F5F3EE;
-            font-family: 'Inter', sans-serif; 
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 40px 165px 2px 165px;
-        }
-
-        .brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 40px;
-            color: #00001A;
-            text-decoration: none;
-        }
-        .desktop-nav ul {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        .desktop-nav ul a {
-            font-size: 15px;
-            color: gray;
-            text-decoration: none;
-        }
-        .menu-open {
-            display: none;
-        }
-        .menu-icon {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            padding: 4px;
-        }
-        .menu-icon span {
-            width: 24px;
-            height: 2px;
-            background-color: #00001A;
-        }
-        .grayscreen {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.35);
-        }
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 60%;
-            height: 100%;
-            background-color: #F5F3EE;
-            padding: 28px 24px;
-            transform: translateX(100%);
-        }
-        .close-btn {
-            display: block;
-            font-size: 22px;
-            text-align: right;
-            margin-bottom: 40px;
-        }
-        .mobile-menu ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        .mobile-menu ul a {
-            font-size: 15px;
-            color: #5E607A;
-            text-decoration: none;
-        }
-
-        .menu-open:checked ~ .grayscreen {
-            display: block;
-        }
-
-        .menu-open:checked ~ .mobile-menu {
-            transform: translateX(0);
-        }
-
-        main {
-            padding: 1px 165px 60px 165px;
-        }
-
-        .page-layout {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            margin-top: 44px;
-        }
-
-        .main-col {
-            flex: 730;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .side-col {
-            flex: 350;
-        }
-        .cover-img {
-            width: 100%;
-            height: 300px;
-            background-image: url('heroimage.jpg');
-            background-size: cover;
-            
-        }
-        .cover-info {
-            display: flex;
-            gap: 30px;
-            padding-top: 28px;
-            padding-bottom: 36px;
-        }
-        .cover-title-insert {
-            flex: 1;
-            min-width: 0;
-        }
-        .cover-title {
-            font-weight: 900;
-            font-size: 55px;
-            line-height: 56px;
-        }
-        .cover-desc-insert {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .cover-desc {
-            font-size: 15px;
-            line-height: 24px;
-            letter-spacing: 0.002em;
-            color: #5E607A;
-        }
-        .read-btn {
-            box-sizing: border-box;
-            text-align: center;
-            padding-top:15px;
-            width: 185px;
-            height: 48px;
-            background-color: #F15E50;
-            color: #FFFFFF;
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin-top: 24px;
-        }
-        .read-btn:hover {
-            background-color: #00001A;
-        }
-        
-        .article-list {
-            display: flex;
-            gap: 30px;
-            width: 80vw;
-        }
-        .article-item {
-            flex: 1;
-            display: flex;
-            gap: 12px;
-            cursor: pointer;
-        }
-        .article-item img {
-            width: 100px;
-            height: 127px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-        .article-text {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .article-num {
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 1;
-            color: #C5C6CE;
-        }
-        .article-title {
-            font-weight: 800;
-            font-size: 18px;
-            line-height: 24px;
-        }
-        .article-item:hover .article-title {
-            color: #E9AB53;
-        }
-        .article-desc {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #5E607A;
-        }
-        .dark-panel {
-            height: 390px;
-            background-color: #00001A;
-            border: 1px solid #5E607A;
-            padding: 39px 24px;
-            display: flex;
-            flex-direction: column;
-        }
-        .dark-panel-heading {
-            font-weight: 800;
-            font-size: 21px;
-            color: #E9AB53;
-            margin-bottom: 20px;
-        }
-        .dark-panel-item {
-            padding: 18px 0;
-            cursor: pointer;
-        }
-        hr{
-            border: none;
-            border-top: 0.5px solid #5E607A;;
-        }
-        .dark-panel-title {
-            font-weight: 800;
-            font-size: 16px;
-            color: #FFFFFF;
-            margin-bottom: 6px;
-            line-height: 1.35;
-        }
-        .dark-panel-item:hover .dark-panel-title {
-            color: #E9AB53;
-        }
-        .dark-panel-desc {
-            font-size: 13px;;
-            color: #C5C6CE;
-            line-height: 2.55;
-        }
-        .back-top {
-            position: fixed;
-            bottom: 28px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #9a8381;
-            color: #FFFFFF;
-            font-size: 1.5rem;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            animation: design 5s ease-in-out infinite;
-        }
-        @keyframes design {
-            0%, 100% { transform:scale(0p);}
-            50%       { transform: scale(1.1); background-color: #F15E50; }
-        }
-        @media (max-width: 820px) {
-
-            .menu-icon {
-                display: flex;
-            }
-            .desktop-nav {
-                display: none;
-            }
-            header {
-                padding: 20px 20px 2px 20px;
-            }
-            main {
-                padding: 1px 20px 50px 20px;
-            }
-            .page-layout {
-                flex-direction: column;
-                gap: 0;
-            }
-            .cover-title {
-                font-size: 36px;
-                line-height: 1.1;
-            }
-            .cover-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .article-list {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .article-item img {
-                width: 80px;
-                height: 80px;
-            }
-            .side-col {
-                margin-top: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body id="top">
-    <input type="checkbox" id="menu-switch" class="menu-open" />
-    <div class="grayscreen"></div>
-    <nav class="mobile-menu" aria-label="Mobile navigation">
-        <label for="menu-switch" class="close-btn">&#x2715;</label>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">New</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">Categories</a></li>
+<body class="page-base" id="top">
+    <!-- id stays so the label connection works.
+         CSS only targets .menu-flag, never the id. -->
+    <input type="checkbox" id="menu-switch" class="menu-flag" />
+    <div class="menu-shade"></div>
+    <nav class="side-sheet">
+        <label for="menu-switch" class="side-sheet__close">&#x2715;</label>
+        <ul class="side-sheet__list">
+            <li class="side-sheet__item"><a href="#" class="side-sheet__link">Home</a></li>
+            <li class="side-sheet__item"><a href="#" class="side-sheet__link">New</a></li>
+            <li class="side-sheet__item"><a href="#" class="side-sheet__link">Popular</a></li>
+            <li class="side-sheet__item"><a href="#" class="side-sheet__link">Trending</a></li>
+            <li class="side-sheet__item"><a href="#" class="side-sheet__link">Categories</a></li>
         </ul>
     </nav>
-    <header>
-        <a href="#" class="brand">W.</a>
-        <nav class="desktop-nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Categories</a></li>
+    <header class="top-bar">
+        <a href="#" class="logomark">W.</a>
+        <nav class="menu-row">
+            <ul class="menu-row__list">
+                <li class="menu-row__item"><a href="#" class="menu-row__link">Home</a></li>
+                <li class="menu-row__item"><a href="#" class="menu-row__link">New</a></li>
+                <li class="menu-row__item"><a href="#" class="menu-row__link">Popular</a></li>
+                <li class="menu-row__item"><a href="#" class="menu-row__link">Trending</a></li>
+                <li class="menu-row__item"><a href="#" class="menu-row__link">Categories</a></li>
             </ul>
         </nav>
-        <label for="menu-switch" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+
+        <label for="menu-switch" class="switch-bars">
+            <span class="switch-bars__line"></span>
+            <span class="switch-bars__line"></span>
+            <span class="switch-bars__line"></span>
         </label>
     </header>
-    <main>
-        <div class="page-layout">
-            <div class="main-col">
-                <div class="cover-img"></div>
+    <main class="page-frame">
+        <!-- split-layout is the OOCSS object. Only knows about the two-column shape. -->
+        <div class="split-layout">
+            <div class="split-layout__main">
+                <div class="lead-banner"></div>
 
-                <div class="cover-info" style="margin-top:15px;">
-                    <div class="cover-title-insert">
-                        <h1 class="cover-title">The Bright Future of Web 3.0?</h1>
+                <div class="lead-intro">
+                    <div class="lead-intro__title-box">
+                        <h1 class="lead-intro__title">The Bright Future of Web 3.0?</h1>
                     </div>
-                    <div class="cover-desc-insert">
-                        <p class="cover-desc">We dive into the next evolution of the web that claims to put the power of
+                    <div class="lead-intro__body-box">
+                        <p class="lead-intro__desc">We dive into the next evolution of the web that claims to put the power of
                             the platforms back into the hands of the people. But is it really fulfilling its promise?
                         </p>
-                        <a href="#" class="read-btn">Read More</a>
+                        <a href="#" class="cta-pill">Read More</a>
                     </div>
                 </div>
-                <section class="article-list" style="margin-top:20px;">
-                    <article class="article-item">
-                        <img src="trainee-a.jpg" alt="Retro PCs" />
-                        <div class="article-text">
-                            <span class="article-num">01</span>
-                            <h2 class="article-title">Reviving Retro PCs</h2>
-                            <p class="article-desc">What happens when old PCs are given modern upgrades?</p>
+
+                <section class="brief-row">
+                    <!-- Each brief gets BOTH classes:
+                         brief = skin, media-block = structure.
+                         That's the OOCSS pattern. -->
+                    <article class="brief media-block">
+                        <img class="brief__image media-block__visual" src="trainee-a.jpg" alt="Retro PCs" />
+                        <div class="brief__body media-block__body">
+                            <span class="brief__index">01</span>
+                            <h2 class="brief__title">Reviving Retro PCs</h2>
+                            <p class="brief__desc">What happens when old PCs are given modern upgrades?</p>
                         </div>
                     </article>
-                    <article class="article-item">
-                        <img src="trainee-b.jpg" alt="Laptops" />
-                        <div class="article-text">
-                            <span class="article-num">02</span>
-                            <h2 class="article-title">Top 10 Laptops of 2022</h2>
-                            <p class="article-desc">Our best picks for various needs and budgets.</p>
+
+                    <article class="brief media-block">
+                        <img class="brief__image media-block__visual" src="trainee-b.jpg" alt="Laptops" />
+                        <div class="brief__body media-block__body">
+                            <span class="brief__index">02</span>
+                            <h2 class="brief__title">Top 10 Laptops of 2022</h2>
+                            <p class="brief__desc">Our best picks for various needs and budgets.</p>
                         </div>
                     </article>
-                    <article class="article-item">
-                        <img src="trainee-c.jpg" alt="Gaming" />
-                        <div class="article-text">
-                            <span class="article-num">03</span>
-                            <h2 class="article-title">The Growth of Gaming</h2>
-                            <p class="article-desc">How the pandemic has sparked fresh opportunities.</p>
+
+                    <article class="brief media-block">
+                        <img class="brief__image media-block__visual" src="trainee-c.jpg" alt="Gaming" />
+                        <div class="brief__body media-block__body">
+                            <span class="brief__index">03</span>
+                            <h2 class="brief__title">The Growth of Gaming</h2>
+                            <p class="brief__desc">How the pandemic has sparked fresh opportunities.</p>
                         </div>
                     </article>
                 </section>
             </div>
-            <aside class="side-col">
-                <div class="dark-panel">
-                    <h2 class="dark-panel-heading">New</h2>
-                    <article class="dark-panel-item">
-                        <h3 class="dark-panel-title">Hydrogen VS Electric Cars</h3>
-                        <p class="dark-panel-desc">Will hydrogen-fueled cars ever catch up to EVs?</p>
-                    </article><hr>
-                    <article class="dark-panel-item">
-                        <h3 class="dark-panel-title">The Downsides of AI Artistry</h3>
-                        <p class="dark-panel-desc">What are the possible adverse effects of on-demand AI image
-                            generation?</p>
-                    </article><hr>
 
-                    <article class="dark-panel-item">
-                        <h3 class="dark-panel-title">Is VC Funding Drying Up?</h3>
-                        <p class="dark-panel-desc">Private funding by VC firms is down 50% YOY. We take a look at what
-                            that means.</p>
+            <aside class="split-layout__side">
+                <div class="dark-list">
+                    <h2 class="dark-list__heading">New</h2>
+
+                    <article class="dark-list__entry">
+                        <h3 class="dark-list__title">Hydrogen VS Electric Cars</h3>
+                        <p class="dark-list__desc">Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        <a href="#" class="dark-list__link">Read More</a>
+                    </article>
+                    <hr class="thin-rule" />
+
+                    <article class="dark-list__entry">
+                        <h3 class="dark-list__title">The Downsides of AI Artistry</h3>
+                        <p class="dark-list__desc">What are the possible adverse effects of on-demand AI image generation?</p>
+                        <a href="#" class="dark-list__link">Read More</a>
+                    </article>
+                    <hr class="thin-rule" />
+                    <article class="dark-list__entry">
+                        <h3 class="dark-list__title">Is VC Funding Drying Up?</h3>
+                        <p class="dark-list__desc">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                        <a href="#" class="dark-list__link">Read More</a>
                     </article>
                 </div>
             </aside>
         </div>
     </main>
-    <a href="#top" class="back-top">To Top</a>
+    <a href="#top" class="top-link">To Top</a>
 </body>
 </html>
