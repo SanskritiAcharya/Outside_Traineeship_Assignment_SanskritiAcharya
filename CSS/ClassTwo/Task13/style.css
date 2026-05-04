@@ -1,0 +1,17 @@
+/*  style.css — only @import statements, no rules here.
+   Order follows ITCSS: broad/generic first, specific last. */
+
+@import 'settings/variables.css';
+
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+@import 'layout/page.css';
+
+@import 'components/person-card.css';
+@import 'components/profile-picture.css';
+@import 'components/person-info.css';
+@import 'components/button.css';
+@import 'components/count-box.css';
+
+@import 'layout/responsive.css';
