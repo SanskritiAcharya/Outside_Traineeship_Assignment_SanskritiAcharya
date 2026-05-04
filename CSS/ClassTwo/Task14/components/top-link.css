@@ -1,0 +1,22 @@
+/* component - the back to top button.
+   Floats in the bottom right and pulses every few seconds. */
+
+.top-link {
+    position: fixed;
+    bottom: 28px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--clay);
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    animation: top-animation 5s ease-in-out infinite;
+}
+
+@keyframes top-animation {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.1); background-color: var(--coral); }
+}

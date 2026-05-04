@@ -1,0 +1,8 @@
+/* component - the W. logo text.
+   Made it its own block (not a top-bar element) because a brand mark is a small reusable thing. */
+.logomark {
+    font-family: var(--display);
+    font-size: 40px;
+    color: var(--ink);
+    text-decoration: none;
+}

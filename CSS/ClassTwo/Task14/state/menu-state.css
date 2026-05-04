@@ -1,0 +1,13 @@
+/* state include rules that change when the menu is open.
+   The hidden checkbox is the trigger. When checked, the menu-shade shows and the side-sheet slides in.
+   I'm using the .menu-flag class. The id stays in HTML for the label connection but I can't target it in CSS. */
+
+.menu-flag {
+    display: none;
+}
+.menu-flag:checked ~ .menu-shade {
+    display: block;
+}
+.menu-flag:checked ~ .side-sheet {
+    transform: translateX(0);
+}

@@ -1,0 +1,19 @@
+/* component - desktop nav row.
+   I added classes at every level following BEM. Hidden on mobile. */
+
+.menu-row__list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.menu-row__link {
+    font-size: 15px;
+    color: var(--gray);
+    text-decoration: none;
+}
+
+@media (max-width: 820px) {
+    .menu-row {
+        display: none;
+    }
+}

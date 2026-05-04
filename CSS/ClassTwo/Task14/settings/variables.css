@@ -1,0 +1,26 @@
+/* settings - all my colors, fonts and sizes go here.
+   Loads first because it has no real styles, just variable names I'll reuse later. */
+
+:root {
+    /* colors */
+    --cream: #F5F3EE;
+    --ink: #00001A;
+    --gray: gray;
+    --slate: #5E607A;
+    --pale: #C5C6CE;
+    --overlay: rgba(0, 0, 0, 0.35);
+
+    --coral: #F15E50;
+    --honey: #E9AB53;
+    --buttercream: #FFEBCC;
+    --clay: #9a8381;
+    --white: #FFFFFF;
+
+    /* fonts */
+    --body: 'Inter', sans-serif;
+    --display: 'Playfair Display', serif;
+
+    /* page side padding (desktop / mobile) */
+    --padding: 165px;
+    --padding-sm: 20px;
+}

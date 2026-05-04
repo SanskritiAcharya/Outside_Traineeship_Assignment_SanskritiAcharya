@@ -1,0 +1,21 @@
+/* layout - the major page regions.
+   SMACSS says layout files only have positional rules, no colors or text styling. Just where things sit on the page. */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px var(--padding) 2px var(--padding);
+}
+
+.page-frame {
+    padding: 1px var(--padding) 60px var(--padding);
+}
+@media (max-width: 820px) {
+    .top-bar {
+        padding: 20px var(--padding-sm) 2px var(--padding-sm);
+    }
+    .page-frame {
+        padding: 1px var(--padding-sm) 50px var(--padding-sm);
+    }
+}

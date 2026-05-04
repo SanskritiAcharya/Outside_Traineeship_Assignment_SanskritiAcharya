@@ -1,0 +1,6 @@
+/* generic - the basic reset.
+   The * selector hits everything, so this loads early. ITCSS says wide reach / low specificity comes first. */
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}

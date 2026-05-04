@@ -1,0 +1,6 @@
+/* elements - body baseline.
+   Can't style the bare body tag (rule says no bare tags), so I added a class on body and styled the class. */
+.page-base {
+    background-color: var(--cream);
+    font-family: var(--body);
+}

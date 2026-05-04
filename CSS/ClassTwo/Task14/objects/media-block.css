@@ -1,0 +1,16 @@
+/* object - OOCSS, the image-and-text pattern.
+   Image on left, text stack on right. No skin. The brief component uses this for its structure and adds its own colors and sizes on top.
+   This is my second OOCSS spot. */
+
+.media-block {
+    display: flex;
+    gap: 12px;
+}
+.media-block__visual {
+    flex-shrink: 0;
+}
+.media-block__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

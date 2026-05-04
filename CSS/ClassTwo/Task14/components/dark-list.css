@@ -1,0 +1,54 @@
+/* component - the dark sidebar with the New darks and the thin divider line between entries.
+   Original used a bare hr selector for the divider, which isn't allowed, so I gave it a class. The divider only shows up here so it stays in the same file. */
+
+
+/* the dark list block */
+
+.dark-list {
+    min-height: 390px;
+    background-color: var(--ink);
+    border: 1px solid var(--slate);
+    padding: 39px 24px;
+    display: flex;
+    flex-direction: column;
+}
+.dark-list__heading {
+    font-weight: 800;
+    font-size: 21px;
+    color: var(--honey);
+    margin-bottom: 20px;
+}
+.dark-list__entry {
+    padding: 18px 0;
+    cursor: pointer;
+}
+.dark-list__title {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+.dark-list__entry:hover .dark-list__title {
+    color: var(--honey);
+}
+.dark-list__desc {
+    font-size: 13px;
+    color: var(--pale);
+    line-height: 2.55;
+}
+.dark-list__link {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--buttercream);
+    text-decoration: none;
+    margin-top: 4px;
+    display: inline-block;
+}
+/* thin divider line */
+.thin-rule {
+    border: none;
+    border-top: 0.5px solid var(--slate);
+}
