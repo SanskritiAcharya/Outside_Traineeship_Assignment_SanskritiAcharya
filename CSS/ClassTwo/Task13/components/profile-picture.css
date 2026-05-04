@@ -1,0 +1,34 @@
+/* I kept the photo and its spinning ring as elements of person-card because this pic ring only exists inside this card; its not something I would ever reuse somewhere else on its own.
+   So in BEM terms, person-card__pic-ring and person-card__pic are ELEMENTS of the person-card BLOCK.
+
+   If it were reusable, I would have made it its own block. */
+
+.person-card__pic-ring {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+.person-card__pic-ring::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 3px solid var(--color-brown);
+  border-top-color: transparent;
+}
+.person-card__pic-ring:hover::before {
+  animation: pic-spin 1.2s linear infinite;
+}
+@keyframes pic-spin {
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+.person-card__pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid var(--color-brown);
+  object-fit: cover;
+  display: block;
+}

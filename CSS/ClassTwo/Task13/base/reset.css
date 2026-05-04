@@ -1,0 +1,9 @@
+/* This is the Base layer in SMACSS and ITCSS.
+   Base styles are things that apply globally, not to any specific component. I'm just making sure every element calculates its size correctly and has no surprise spacing.
+   I used * selector here because this is a reset, and it's the one place where that is acceptable. */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

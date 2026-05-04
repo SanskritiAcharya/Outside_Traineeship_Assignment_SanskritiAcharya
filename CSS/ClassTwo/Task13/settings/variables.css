@@ -1,0 +1,14 @@
+/* I put all my colors and values here as CSS variables.
+   This is the Settings layer in ITCSS. It has no actual CSS output on its own, just stores values for other files to use.
+   The reason I did this is so if I ever want to change a color, I change it in one place here instead of hunting through every file. */
+
+:root {
+  --color-brown:      #7C6957;
+  --color-brown-dark: #4a3f35;
+  --color-beige:      #F5E8DF;
+  --color-beige-dark: #CBBFB6;
+  --color-grey-label: #8E7E6D;
+  --color-grey-sub:   #999999;
+  --color-white:      #ffffff;
+  --color-page-bg:    orange;
+}

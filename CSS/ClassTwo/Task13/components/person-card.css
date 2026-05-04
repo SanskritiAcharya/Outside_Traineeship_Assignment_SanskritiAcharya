@@ -1,0 +1,38 @@
+/* This is the Component layer in SMACSS.
+   In BEM, I considered person-card as the BLOCK because it is the main self-contained UI piece; the whole card.
+   Everything inside it is an ELEMENT of this block, so they use the double underscore: person-card__left, person-card__stats etc.
+   OOCSS: I split structure (layout) and skin (colors) below.
+   If I ever want the same card shape with different colors, I only touch the skin part. */
+
+/* Structure */
+.person-card {
+  display: flex;
+  width: 580px;
+  height: 520px;
+}
+.person-card__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.person-card__stats {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+}
+.person-card__stats-gap {
+  height: 4px;
+  flex-shrink: 0;
+}
+
+/* Skin */
+.person-card {
+  background: var(--color-white);
+  box-shadow: 15px 17px 20px 5px #00000038;
+}
+.person-card__stats-gap {
+  background-color: var(--color-white);
+}

@@ -1,0 +1,12 @@
+/* The name and job title are ELEMENTS of person-card in BEM because they only make sense inside this card context.
+   I could have made them their own block but they are too simple and specific to this card to justify that. */
+
+.person-card__name {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-brown-dark);
+}
+.person-card__job {
+  font-size: 15px;
+  color: var(--color-grey-sub);
+}

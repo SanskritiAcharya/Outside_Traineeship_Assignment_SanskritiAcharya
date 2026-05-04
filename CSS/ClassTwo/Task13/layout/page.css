@@ -1,0 +1,11 @@
+/* This is the Layout layer in SMACSS.
+   Layout styles handle how big sections of the page are positioned.
+   This has nothing to do with the card itself, it just centers whatever is on the page.*/
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--color-page-bg);
+}

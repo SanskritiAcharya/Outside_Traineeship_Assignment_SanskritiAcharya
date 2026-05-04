@@ -1,0 +1,7 @@
+/* I set the font on the body tag here because it is a global style, it applies down to everything on the page.
+   I kept this separate from reset.css because reset is about removing styles and typography is about adding them.
+   Keeping them in different files makes it easier to find things. */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}

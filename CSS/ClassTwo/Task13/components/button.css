@@ -1,0 +1,36 @@
+/* I treated the button as its own BLOCK in BEM, not an element of person-card because a button can exist anywhere on a page, not just inside this card. 
+   OOCSS: .bio-btn holds the shared structure (size, shape).
+   --outline and --filled are modifier classes for the skin only. */
+
+
+/* Structure (shared) */
+.bio-btn {
+  width: 190px;
+  height: 46px;
+  border-radius: 50px;
+  border: 3px solid var(--color-brown);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Skin: --outline (Follow button) */
+.bio-btn--outline {
+  background: var(--color-white);
+  color: var(--color-brown);
+}
+.bio-btn--outline:hover {
+  background: var(--color-brown);
+  color: var(--color-white);
+}
+
+
+/* Skin: --filled (Message button) */
+.bio-btn--filled {
+  background: var(--color-brown);
+  color: var(--color-white);
+}
+.bio-btn--filled:hover {
+  background: var(--color-white);
+  color: var(--color-brown);
+}

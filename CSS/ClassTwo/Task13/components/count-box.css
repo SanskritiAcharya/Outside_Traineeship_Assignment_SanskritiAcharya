@@ -1,0 +1,68 @@
+/* I treated stat-block as its own BLOCK in BEM not as an element of person-card — because looking at the card, the right side with the numbers could actually be placed somewhere else too.
+   The hint in the task also said to ask myself about could this exist outside the card? I think yes, so it gets its own block.
+   OOCSS structure vs skin:
+   All three box share the same layout. Only their colors differ. So I wrote the shared structure once and then used modifier classes --default and --highlighted for the different color skins.
+   --default and --highlighted are modifiers for different skins. */
+
+/* Structure (shared)*/
+
+.count-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.count-box__num {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.count-box__tag {
+  font-size: 14px;
+}
+
+
+/* Skin: --default (Posts and Follower) */
+
+.count-box--default {
+  background: var(--color-beige);
+}
+
+.count-box--default .count-box__num {
+  color: var(--color-brown);
+}
+
+.count-box--default .count-box__tag {
+  color: var(--color-grey-label);
+}
+
+.count-box--default:hover {
+  background: var(--color-beige-dark);
+}
+
+
+/* Skin: --highlighted (Likes — starts darker, flips on hover) */
+
+.count-box--highlighted {
+  background: var(--color-beige-dark);
+}
+
+.count-box--highlighted .count-box__num,
+.count-box--highlighted .count-box__tag {
+  color: var(--color-white);
+}
+
+.count-box--highlighted:hover {
+  background: var(--color-beige);
+}
+
+.count-box--highlighted:hover .count-box__num {
+  color: var(--color-brown);
+}
+
+.count-box--highlighted:hover .count-box__tag {
+  color: var(--color-grey-label);
+}
