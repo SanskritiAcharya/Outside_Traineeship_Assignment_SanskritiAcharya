@@ -1,0 +1,23 @@
+/* style.css just imports, no real rules.
+   Order follows ITCSS: low specificity / wide reach first, narrow / specific stuff last. This way the cascade works in my favor and I never need !important. */
+
+@import 'settings/variables.css';
+
+@import 'base/reset.css';
+
+@import 'elements/page.css';
+
+@import 'objects/split-layout.css';
+@import 'objects/media-block.css';
+
+@import 'layout/regions.css';
+
+@import 'components/logo.css';
+@import 'components/menu-row.css';
+@import 'components/mobile-menu.css';
+@import 'components/lead.css';
+@import 'components/brief.css';
+@import 'components/dark-list.css';
+@import 'components/top-link.css';
+
+@import 'state/menu-state.css';
