@@ -1,5 +1,5 @@
-const menuBtn   = document.querySelector('.show-menu');
-const sidePanel = document.querySelector('.sidebar');
+const menuBtn   = document.querySelector('.menu-btn');
+const sidePanel = document.querySelector('.side-panel');
 // Tracks whether the panel is currently visible or not
 let isPanelOpen = false;
 // Tracks whether we're still inside the 500ms wait window

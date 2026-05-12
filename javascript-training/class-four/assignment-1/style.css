@@ -1,11 +1,13 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
   background: #fff;
   border-bottom: 1px solid #ccc;
 }
-.show-menu {
+.menu-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -14,13 +16,14 @@
 .close-icon {
   display: none;
 }
-.show-menu.panel-open .three-line-icon {
+.menu-btn.panel-open .three-line-icon {
   display: none;
 }
-.show-menu.panel-open .close-icon {
+
+.menu-btn.panel-open .close-icon {
   display: inline;
 }
-.panel {
+.side-panel {
   position: fixed;
   top: 50px;
   left: 0;
@@ -31,6 +34,6 @@
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
-.sidebar.panel-open {
+.side-panel.panel-open {
   transform: translateX(0);
 }
