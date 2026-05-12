@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.show-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+.close-icon {
+  display: none;
+}
+.show-menu.panel-open .three-line-icon {
+  display: none;
+}
+.show-menu.panel-open .close-icon {
+  display: inline;
+}
+.panel {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 50px);
+  background: #d4d4d4;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.panel-open {
+  transform: translateX(0);
+}
