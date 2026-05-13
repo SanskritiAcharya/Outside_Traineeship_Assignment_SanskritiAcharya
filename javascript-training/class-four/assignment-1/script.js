@@ -17,8 +17,7 @@ function onMenuClick() {
     return;
   }
   switchPanel(); 
-  isThrottled = true; // lock it
-  // After 500ms, unlock so the next click can work again
+  isThrottled = true; 
   setTimeout(function () {
     isThrottled = false;
   }, 500);
