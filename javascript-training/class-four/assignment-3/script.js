@@ -1,6 +1,5 @@
 const colors = ["tomato", "orange", "mediumseagreen", "cornflowerblue", "mediumpurple", "hotpink", "mediumturquoise", "slategray"];
-let colorIndex = 0; // keeps track of which color to use next
-
+let colorIndex = 0; 
 // Set up MutationObserver to watch the #app div
 const appContainer = document.getElementById("app");
 
@@ -8,7 +7,6 @@ const appContainer = document.getElementById("app");
 function handleDomChange(mutationsList) {
   for (const mutation of mutationsList) {
     for (const newNode of mutation.addedNodes) {
-      // Check if the added node is our button
       if (newNode.tagName === "BUTTON" && newNode.id === "addBoxBtn") {
         newNode.addEventListener("click", function () {
           const box = document.createElement("div");
@@ -37,7 +35,5 @@ setTimeout(function () {
   const addBoxButton = document.createElement("button");
   addBoxButton.id = "addBoxBtn";
   addBoxButton.textContent = "Add Box";
-
-  // Appending the button triggers the MutationObserver above
   appContainer.appendChild(addBoxButton);
 }, 2000);
