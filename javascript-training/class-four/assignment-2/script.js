@@ -1,7 +1,5 @@
 const boxOnce = document.getElementById("box-once");
 const boxRepeat = document.getElementById("box-repeat");
-
-// tracking if box-once has already rotated so we dont rotate it again
 let alreadyRotated = false;
 
 // Box 1: rotate only the first time it enters the screen 
@@ -10,7 +8,7 @@ const watcherForOnce = new IntersectionObserver(function(entries) {
 
   // isIntersecting = true means the box is visible on screen right now
   if (entry.isIntersecting && !alreadyRotated) {
-    boxOnce.classList.add("rotated"); // rotate 
+    boxOnce.classList.add("rotated"); 
     alreadyRotated = true;            // never rotate again
     watcherForOnce.unobserve(boxOnce);
   }
