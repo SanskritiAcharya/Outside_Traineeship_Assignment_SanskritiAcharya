@@ -1,0 +1,10 @@
+@use 'variables' as v;
+
+// caller gives two padding values, mixin writes the media query
+@mixin responsive-padding($mobile, $desktop) {
+  padding: $mobile;
+
+  @media (min-width: v.$desktop-bp) {
+    padding: $desktop;
+  }
+}

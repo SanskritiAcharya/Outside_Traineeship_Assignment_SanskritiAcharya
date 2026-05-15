@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button System</title>
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    body { padding: 40px; background: #f9f9f9; }
+    h2   { margin: 24px 0 10px; }
+    .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>Button System</h1>
+
+  <h2>Variants</h2>
+  <div class="row">
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-ghost">Ghost</button>
+  </div>
+
+  <h2>Sizes</h2>
+  <div class="row">
+    <button class="btn btn-primary btn--sm">Small</button>
+    <button class="btn btn-primary btn--md">Medium</button>
+    <button class="btn btn-primary btn--lg">Large</button>
+  </div>
+
+  <h2>Disabled</h2>
+  <div class="row">
+    <button class="btn btn-primary" disabled>Primary</button>
+    <button class="btn btn-danger" disabled>Danger</button>
+    <button class="btn btn-ghost" disabled>Ghost</button>
+  </div>
+
+</body>
+</html>

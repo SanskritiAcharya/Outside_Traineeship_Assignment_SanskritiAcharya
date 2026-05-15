@@ -1,0 +1,9 @@
+@mixin make-row($side-by-side: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $side-by-side;
+}
+
+@mixin on-mobile {
+  @media (max-width: 768px) { @content; }
+}

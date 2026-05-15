@@ -1,0 +1,9 @@
+@use 'variables' as v;
+
+// generates .m-1 through .m-6 from the spacing list
+$num: 1;
+
+@each $gap in v.$spacing-scale {
+  .m-#{$num} { margin: $gap; }
+  $num: $num + 1;
+}

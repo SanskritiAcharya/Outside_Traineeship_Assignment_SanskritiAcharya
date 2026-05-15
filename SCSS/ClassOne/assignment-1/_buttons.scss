@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "variables" as v;
+@use "mixins" as m;
+
+// base styles every button shares
+.btn {
+  display:         inline-block;
+  font-weight:     v.$btn-font-bold;
+  border-radius:   v.$round-corners;
+  cursor:          pointer;
+  text-align:      center;
+  @include m.size-btn("md"); // default size
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor:  not-allowed;
+  }
+}
+
+// generate .btn-primary, .btn-danger, .btn-ghost
+@each $name, $_ in v.$btn-variants {
+  .btn-#{$name} {
+    @include m.paint-btn($name);
+  }
+}
+
+// generate .btn--sm, .btn--md, .btn--lg
+@each $size, $_ in v.$btn-sizes {
+  .btn--#{$size} {
+    @include m.size-btn($size);
+  }
+}

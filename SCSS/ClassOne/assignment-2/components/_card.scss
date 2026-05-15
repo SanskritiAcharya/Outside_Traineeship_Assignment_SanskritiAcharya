@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+// .card is the block
+.card {
+  @include m.responsive-padding(16px, 32px);
+
+  background-color: v.$red;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-end;
+
+  // element: small label at bottom
+  &__label {
+    font-size: 0.7rem;
+    color: v.$label-color;
+  }
+}

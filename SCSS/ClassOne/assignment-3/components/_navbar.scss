@@ -1,0 +1,98 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// all navbar styles live inside this one block (BEM block)
+.navbar {
+  @include make-row(space-between);
+  background-color: $nav-bg;
+  padding: $pad-top-bot $pad-sides;
+
+  &__logo {
+    font-size: $logo-size;
+    font-weight: bold;
+    color: $nav-text-bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // level 2
+  &__list {
+    @include make-row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    // level 3
+    &-item {
+      display: inline;
+    }
+
+    // level 4 : &:hover, &:focus, &:active all live here
+    &-link {
+      color: $nav-text;
+      font-size: $link-size;
+      text-decoration: none;
+      padding: $link-pad;
+
+      &:hover {
+        color: $nav-text-bold;
+        text-decoration: underline;
+      }
+
+      &:focus {
+        outline: 2px solid $nav-text-bold;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+
+      &--current {
+        color: $nav-text-bold;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__open-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    &-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: $nav-text-bold;
+    }
+  }
+
+  @include on-mobile {
+    flex-wrap: wrap;
+
+    &__open-btn {
+      display: flex;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease;
+    }
+
+    &__checkbox:checked~&__list {
+      max-height: 300px;
+    }
+  }
+}

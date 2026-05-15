@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "variables" as v;
+
+// picks a variant from the map and outputs its 3 properties
+@mixin paint-btn($pick) {
+  $got: map.get(v.$btn-variants, $pick);
+  background-color: map.get($got, "bg");
+  color:            map.get($got, "color");
+  border:           2px solid map.get($got, "border");
+}
+
+// picks a size from the map and outputs padding + font-size
+@mixin size-btn($pick) {
+  $got: map.get(v.$btn-sizes, $pick);
+  padding:   map.get($got, "padding");
+  font-size: map.get($got, "font-size");
+}

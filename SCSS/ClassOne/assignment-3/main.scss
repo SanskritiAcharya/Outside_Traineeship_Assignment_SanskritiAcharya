@@ -1,0 +1,9 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'components/navbar';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
