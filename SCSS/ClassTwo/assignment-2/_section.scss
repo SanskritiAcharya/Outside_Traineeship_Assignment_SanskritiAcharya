@@ -1,0 +1,49 @@
+// .section is the BEM block for the whole procurement area
+// Elements: __label, __title, __grid
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.section {
+  @include m.flex-col-center;
+  min-height: 100vh;
+  background-color: v.$bg-page;
+  padding: 0 40px;
+
+  &__label {
+    font-size: v.$size-label;
+    font-weight: 400;
+    line-height: v.$lh-label;
+    letter-spacing: v.$ls-label;
+    text-align: center;
+    text-transform: uppercase;
+    color: v.$text-teal;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: v.$size-heading;
+    font-weight: 400;
+    line-height: v.$lh-heading;
+    text-align: center;
+    color: v.$text-dark;
+    margin-bottom: 64px;
+  }
+
+  &__grid {
+    display: flex;
+    gap: v.$gap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include m.respond-to('md') {
+    &__grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+  }
+}

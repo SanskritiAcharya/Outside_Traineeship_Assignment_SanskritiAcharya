@@ -1,0 +1,23 @@
+// .card is the BEM block for each white logo box
+// Element: __logo (holds the img)
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.card {
+  @include m.flex-center;
+  width: v.$card-w;
+  height: v.$card-h;
+  background-color: v.$card-bg;
+  border-radius: v.$card-radius;
+
+  &__logo {
+    @include m.flex-center;
+    opacity: v.$logo-opacity;
+
+    img {
+      max-width: 229px;
+      max-height: 131px;
+      object-fit: contain;
+    }
+  }
+}

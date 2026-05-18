@@ -1,0 +1,18 @@
+// show/hide the answer panel
+@function show($open) {
+  @if $open == true {
+    @return block;
+  } @else {
+    @return none;
+  }
+}
+
+// flip the arrow when open vs closed
+@function flip($open) {
+  @if $open == true {
+    @return rotate(180deg);
+  } @else {
+    @return rotate(0deg);
+  }
+}
+ 

@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Responsive
+@mixin screen($bp) {
+  @media (max-width: map.get($breaks, $bp)) {
+    @content;
+  }
+}
+
+@mixin round-btn($color: $white) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color;
+  border-radius: 999px;
+  color: $color;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
