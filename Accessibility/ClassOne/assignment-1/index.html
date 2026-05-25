@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main" class="jump-link">Skip to main content</a>
+  <main id="main">
+    <h1>Contact us</h1>
+    <p class="note">(*) Asterisk denotes mandatory fields</p>
+
+    <form id="form">
+
+      <div class="two-col">
+
+        <div class="left">
+
+          <div class="box">
+            <label for="fname">First name*</label>
+            <input type="text" id="fname" name="fname"
+                   required aria-required="true"
+                   autocomplete="given-name"
+                   placeholder=" " />
+          </div>
+
+          <div class="box">
+            <label for="lname">Last name*</label>
+            <input type="text" id="lname" name="lname"
+                   required aria-required="true"
+                   autocomplete="family-name"
+                   placeholder=" " />
+          </div>
+
+          <div class="box">
+            <label for="email">Work email*</label>
+            <input type="email" id="email" name="email"
+                   required aria-required="true"
+                   autocomplete="email"
+                   placeholder=" " />
+          </div>
+
+          <div class="box">
+            <label for="company">Company*</label>
+            <input type="text" id="company" name="company"
+                   required aria-required="true"
+                   autocomplete="organization"
+                   placeholder=" " />
+          </div>
+
+          <div class="box">
+            <label for="jobtitle">Job title*</label>
+            <input type="text" id="jobtitle" name="jobtitle"
+                   required aria-required="true"
+                   autocomplete="organization-title"
+                   placeholder=" " />
+          </div>
+
+          <div class="box">
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone"
+                   autocomplete="tel"
+                   placeholder=" " />
+          </div>
+
+        </div>
+
+        <div class="right">
+          <label for="message" class="hidden-label">How can we help you?</label>
+          <textarea id="message" name="message"
+                    placeholder="How can we help you?"></textarea>
+
+          <p class="email-note">
+            You can also email us directly at
+            <a href="mailto:sujit@outside.studio"
+               target="_blank" rel="noopener noreferrer">sujit@outside.studio</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="checks">
+
+        <div class="check-row">
+          <input type="checkbox" id="privacy" name="privacy" required aria-required="true" />
+          <label for="privacy">
+            I agree to the use or processing of my personal information by Persistent Systems
+            for the purpose of fulfilling this request and in accordance with
+            <a href="https://outside.studio/" target="_blank"
+               rel="noopener noreferrer" class="link">privacy notice</a>.
+          </label>
+        </div>
+
+        <div class="check-row">
+          <input type="checkbox" id="newsletter" name="newsletter" />
+          <label for="newsletter">
+            Subscribe me to Persistent's latest thought leadership, blogs and updates.
+          </label>
+        </div>
+
+      </div>
+
+      <button type="submit" class="submit">Submit</button>
+
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

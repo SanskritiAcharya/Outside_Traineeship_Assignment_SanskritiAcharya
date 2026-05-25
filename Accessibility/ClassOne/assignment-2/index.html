@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SansSite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main" class="skip">Skip to main content</a>
+
+  <header>
+    <div class="top-row">
+      <a href="/" class="brand">SansSite</a>
+
+      <nav aria-label="Utility navigation">
+        <ul class="util-nav">
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <input type="checkbox" id="mob-toggle" aria-label="Toggle navigation" />
+    <label for="mob-toggle" class="mob-label">☰ Menu</label>
+
+    <nav id="site-nav" aria-label="Main site navigation">
+      <ul class="main-nav">
+
+        <li class="has-dropdown">
+          <input type="checkbox" id="dd-services" class="dd-toggle" />
+          <label for="dd-services" class="dd-label">Services > </label>
+          <ul class="submenu">
+            <li><a href="#">Cloud</a></li>
+            <li><a href="#">Data</a></li>
+            <li><a href="#">AI</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <input type="checkbox" id="dd-work" class="dd-toggle" />
+          <label for="dd-work" class="dd-label">Our Work > </label>
+          <ul class="submenu">
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Industries</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <main id="main">
+    <p>Welcome to SansSite.</p>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
