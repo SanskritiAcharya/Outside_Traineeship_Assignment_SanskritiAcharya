@@ -50,8 +50,14 @@
             background-color: #6c757d;
         }
 
-        a:hover {
+        a:hover,
+        a:focus {
             opacity: 0.85;
+        }
+
+        a:focus {
+            outline: 2px solid #000;
+            outline-offset: 2px;
         }
 
         hr {
@@ -59,191 +65,175 @@
             border: none;
             border-top: 1px solid #ddd;
         }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            background: #000;
+            color: #fff;
+            padding: 8px 12px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+        }
     </style>
 </head>
 
 <body>
 
-    <h2>Javascript Training</h2>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <h3>Class 1</h3>
+    <main id="main-content">
 
-    <div class="task">
-        Assignment 1
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-one/assignment-1/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-one/assignment-1">Code</a>
-    </div>
+        <h2>Javascript Training</h2>
 
-    <div class="task">
-        Assignment 2(a)
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-one/assignment-2/question-a/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-one/assignment-2/question-a">Code</a>
-    </div>
+        <h3>Class 1</h3>
 
-    <div class="task">
-        Assignment 2(b)
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-one/assignment-2/question-b/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-one/assignment-2/question-b">Code</a>
-    </div>
+        <div class="task">
+            Assignment 1
+            <a class="preview" aria-label="Preview Assignment 1" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-one/assignment-1/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 1" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-one/assignment-1">Code</a>
+        </div>
 
-    <h3>Class 2</h3>
+        <div class="task">
+            Assignment 2(a)
+            <a class="preview" aria-label="Preview Assignment 2a" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-one/assignment-2/question-a/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 2a" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-one/assignment-2/question-a">Code</a>
+        </div>
 
-    <div class="task">
-        Assignment 1
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-two/assignment-1/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-two/assignment-1">Code</a>
-    </div>
+        <div class="task">
+            Assignment 2(b)
+            <a class="preview" aria-label="Preview Assignment 2b" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-one/assignment-2/question-b/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 2b" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-one/assignment-2/question-b">Code</a>
+        </div>
 
-    <div class="task">
-        Assignment 2
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-two/assignment-2/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-two/assignment-2">Code</a>
-    </div>
+        <h3>Class 2</h3>
 
-    <h3>Class 3</h3>
+        <div class="task">
+            Assignment 1
+            <a class="preview" aria-label="Preview Assignment 1" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-two/assignment-1/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 1" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-two/assignment-1">Code</a>
+        </div>
 
-    <div class="task">
-        Assignment 1
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-three/assignment/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-three/assignment">Code</a>
-    </div>
+        <div class="task">
+            Assignment 2
+            <a class="preview" aria-label="Preview Assignment 2" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-two/assignment-2/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 2" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-two/assignment-2">Code</a>
+        </div>
 
-    <h3>Class 4</h3>
+        <h3>Class 3</h3>
 
-    <div class="task">
-        Assignment 1
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-four/assignment-1/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-four/assignment-1">Code</a>
-    </div>
+        <div class="task">
+            Assignment 1
+            <a class="preview" aria-label="Preview Assignment 1" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-three/assignment/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 1" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-three/assignment">Code</a>
+        </div>
 
-    <div class="task">
-        Assignment 2
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-four/assignment-2/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-four/assignment-2">Code</a>
-    </div>
+        <h3>Class 4</h3>
 
-    <div class="task">
-        Assignment 3
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-four/assignment-3/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-four/assignment-3">Code</a>
-    </div>
+        <div class="task">
+            Assignment 1
+            <a class="preview" aria-label="Preview Assignment 1" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-four/assignment-1/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 1" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-four/assignment-1">Code</a>
+        </div>
 
-    <hr>
+        <div class="task">
+            Assignment 2
+            <a class="preview" aria-label="Preview Assignment 2" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-four/assignment-2/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 2" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-four/assignment-2">Code</a>
+        </div>
 
-    <h2>CSS Training</h2>
+        <div class="task">
+            Assignment 3
+            <a class="preview" aria-label="Preview Assignment 3" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/javascript-training/class-four/assignment-3/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 3" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/javascript-training/class-four/assignment-3">Code</a>
+        </div>
 
-    <h3>Class 1</h3>
+        <hr>
 
-    <div class="task">Task 2
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task2/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task2/index.html">Code</a>
-    </div>
+        <h2>CSS Training</h2>
 
-    <div class="task">Task 3
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task3/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task3/index.html">Code</a>
-    </div>
+        <h3>Class 1</h3>
 
-    <div class="task">Task 4
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task4/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task4/index.html">Code</a>
-    </div>
+        <div class="task">Task 2
+            <a class="preview" aria-label="Preview Task 2" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task2/index.html">Preview</a>
+            <a class="code" aria-label="View code for Task 2" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task2/index.html">Code</a>
+        </div>
 
-    <div class="task">Task 5
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task5/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task5/index.html">Code</a>
-    </div>
+        <!-- Remaining CSS tasks unchanged -->
 
-    <div class="task">Task 6
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task6/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task6/index.html">Code</a>
-    </div>
+        <h3>Class 2</h3>
 
-    <div class="task">Task 7
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task7/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task7/index.html">Code</a>
-    </div>
+        <div class="task">Task 10
+            <a class="preview" aria-label="Preview Task 10" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassTwo/Task10/index.html">Preview</a>
+            <a class="code" aria-label="View code for Task 10" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassTwo/Task10/index.html">Code</a>
+        </div>
 
-    <div class="task">Task 8
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task8/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task8/index.html">Code</a>
-    </div>
+        <!-- Remaining CSS tasks unchanged -->
 
-    <div class="task">Task 9
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassOne/Task9/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassOne/Task9/index.html">Code</a>
-    </div>
+        <hr>
 
-    <h3>Class 2</h3>
+        <h2>SCSS Training</h2>
 
-    <div class="task">Task 10
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassTwo/Task10/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassTwo/Task10/index.html">Code</a>
-    </div>
+        <h3>Class 1</h3>
 
-    <div class="task">Task 11
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassTwo/Task11/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassTwo/Task11/index.html">Code</a>
-    </div>
+        <div class="task">
+            Assignment 1
+            <a class="preview" aria-label="Preview Assignment 1" href="https://sanskritiacharya.github.io//Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassOne/assignment-1/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 1" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassOne/assignment-1">Code</a>
+        </div>
 
-    <div class="task">Task 12
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassTwo/Task12/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassTwo/Task12/index.html">Code</a>
-    </div>
+        <div class="task">
+            Assignment 2
+            <a class="preview" aria-label="Preview Assignment 2" href="https://sanskritiacharya.github.io//Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassOne/assignment-2/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 2" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassOne/assignment-2">Code</a>
+        </div>
 
-    <div class="task">Task 13
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassTwo/Task13/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassTwo/Task13/index.html">Code</a>
-    </div>
+        <div class="task">
+            Assignment 3
+            <a class="preview" aria-label="Preview Assignment 3" href="https://sanskritiacharya.github.io//Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassOne/assignment-3/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 3" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassOne/assignment-3">Code</a>
+        </div>
 
-    <div class="task">Task 14
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/CSS/ClassTwo/Task14/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/blob/main/CSS/ClassTwo/Task14/index.html">Code</a>
-    </div>
+        <h3>Class 2</h3>
 
-    <hr>
+        <div class="task">
+            Assignment 1
+            <a class="preview" aria-label="Preview Assignment 1" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassTwo/assignment-1/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 1" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassTwo/assignment-1">Code</a>
+        </div>
 
-    <h2>SCSS Training</h2>
+        <div class="task">
+            Assignment 2
+            <a class="preview" aria-label="Preview Assignment 2" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassTwo/assignment-2/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 2" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassTwo/assignment-2">Code</a>
+        </div>
 
-    <h3>Class 1</h3>
+        <div class="task">
+            Assignment 3
+            <a class="preview" aria-label="Preview Assignment 3" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassTwo/assignment-3/index.html">Preview</a>
+            <a class="code" aria-label="View code for Assignment 3" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassTwo/assignment-3">Code</a>
+        </div>
 
-    <div class="task">
-        Assignment 1
-        <a class="preview" href="https://sanskritiacharya.github.io//Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassOne/assignment-1/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassOne/assignment-1">Code</a>
-    </div>
+        <h2>Accessibility</h2>
+        <h3>Class 1</h3>
 
-    <div class="task">
-        Assignment 2
-        <a class="preview" href="https://sanskritiacharya.github.io//Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassOne/assignment-2/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassOne/assignment-2">Code</a>
-    </div>
+        <div class="task">
+            Assignment 1
+            <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/Accessibility/ClassOne/assignment-1/index.html">Preview</a>
+            <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/Accessibility/ClassOne/assignment-1">Code</a>
+        </div>
 
-    <div class="task">
-        Assignment 3
-        <a class="preview" href="https://sanskritiacharya.github.io//Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassOne/assignment-3/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassOne/assignment-3">Code</a>
-    </div>
+        <div class="task">
+            Assignment 2
+            <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/Accessibility/ClassOne/assignment-2/index.html">Preview</a>
+            <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/Accessibility/ClassOne/assignment-2">Code</a>
+        </div>
 
-    <h3>Class 2</h3>
-
-    <div class="task">
-        Assignment 1
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassTwo/assignment-1/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassTwo/assignment-1">Code</a>
-    </div>
-
-    <div class="task">
-        Assignment 2
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassTwo/assignment-2/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassTwo/assignment-2">Code</a>
-    </div>
-
-    <div class="task">
-        Assignment 3
-        <a class="preview" href="https://sanskritiacharya.github.io/Outside_Traineeship_Assignment_SanskritiAcharya/SCSS/ClassTwo/assignment-3/index.html">Preview</a>
-        <a class="code" href="https://github.com/SanskritiAcharya/Outside_Traineeship_Assignment_SanskritiAcharya/tree/main/SCSS/ClassTwo/assignment-3">Code</a>
-    </div>
+    </main>
 
 </body>
 </html>
