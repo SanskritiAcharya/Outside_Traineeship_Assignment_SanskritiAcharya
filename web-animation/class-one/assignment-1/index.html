@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    .card {
+      display: flex;
+      gap: 20px;
+    }
+    .arrow-div {
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+    }
+    @keyframes arrowFirst {
+      0% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      45% {
+        transform: translate(14px, -14px);
+        opacity: 0;
+      }
+
+      50% {
+        transform: translate(-14px, 14px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes arrowSecond {
+      0% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      45% {
+        transform: translate(-14px, 14px);
+        opacity: 0;
+      }
+
+      50% {
+        transform: translate(14px, -14px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+    .diagonal-card .arrow-icon {
+      animation: arrowSecond 0.5s ease-in-out;
+    }
+    .diagonal-card:hover .arrow-icon {
+      animation: arrowFirst 0.5s ease-in-out forwards;
+    }
+
+    @keyframes downArrowHover {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      45% {
+        transform: translateY(14px);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(-14px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes downArrowLeave {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      45% {
+        transform: translateY(-14px);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(14px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .down-card .arrow-icon {
+      animation: downArrowLeave 0.5s ease-in-out;
+    }
+    .down-card:hover .arrow-icon {
+      animation: downArrowHover 0.5s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="card diagonal-card">
+    <span>Diagonal</span>
+    <div class="arrow-div">
+      <svg class="arrow-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 12 12"
+        fill="none"
+        width="20"
+        height="20">
+
+        <rect x="2" y="2" width="8" height="1" fill="#74814D"/>
+
+        <rect x="9" y="2" width="1" height="8" fill="#74814D"/>
+
+        <path fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M1.64648 9.64648L8.64648 2.64648L9.35359 3.35359L2.35359 10.3536L1.64648 9.64648Z"
+          fill="#74814D"/>
+      </svg>
+
+    </div>
+
+  </div>
+  <br><br><br><br>
+  <div class="card down-card">
+    <span>Down</span>
+
+    <div class="arrow-div">
+
+      <svg class="arrow-icon"
+        viewBox="0 0 12 12"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20">
+
+        <path
+          d="m11.657 6-5.6568 5.6568-0.7071-0.7071 5.6568-5.6568 0.7071 0.70711z"
+          fill="#1E1E1E">
+        </path>
+
+        <path
+          d="m6.7071 10.95-0.70711 0.7071-5.6568-5.6568 0.70711-0.70711 5.6568 5.6568z"
+          fill="#1E1E1E">
+        </path>
+
+        <path
+          d="m5.5 1h1v10h-1v-10z"
+          fill="#1E1E1E">
+        </path>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
