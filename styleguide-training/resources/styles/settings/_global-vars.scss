@@ -1,0 +1,29 @@
+:root {
+  --color-brand: #FF6449;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+  --fs-h1: 48px;
+  --fs-h1-italic: 42px;
+  --fs-h2: 42px;
+  --fs-h3: 26px;
+  --fs-special-xl: 80px;
+  --fs-number: 80px;
+  --fs-intro: 26px;
+  --fs-body: 18px;
+  --fs-body-sm: 14px;
+  --fs-body-xs: 12px;
+  --fs-button: 22px;
+  --fs-mono-tag: 12px;
+
+  --ls-default: -0.01em; // -1%
+  --ls-number: -0.05em; // -5%
+  --ls-button: 0.10em; // 10%
+
+  --btn-padding-y: 12px;
+  --btn-padding-x: 40px;
+  --btn-radius: 14px;
+  --btn-tag-padding-y: 5px;
+  --btn-tag-padding-x: 10px;
+  --btn-tag-radius: 8px;
+}

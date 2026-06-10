@@ -1,0 +1,17 @@
+// Shared button typography (reused across all button variants)
+%btn-typography {
+  font-family: 'Interstate-Bold', sans-serif;
+  font-size: var(--fs-button);
+  font-weight: 400;
+  letter-spacing: var(--ls-button);
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+%mono-tag-typography {
+  font-family: 'InterstateMono', monospace;
+  font-size: var(--fs-mono-tag);
+  font-weight: 400;
+  letter-spacing: var(--ls-default);
+  text-transform: uppercase;
+}

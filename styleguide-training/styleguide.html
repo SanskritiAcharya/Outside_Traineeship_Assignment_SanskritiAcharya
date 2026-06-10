@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styleguide Assignment</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="public/css/app.css">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Outfit', 'Switzer', sans-serif;
+    }
+
+    .sg-section {
+      padding: 30px 0;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .sg-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .sg-section__title {
+      margin-bottom: 25px;
+      color: #000000;
+      font-weight: 700;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', 'InterstateMono', monospace;
+      color: var(--color-brand);
+      background-color: rgba(255, 100, 73, 0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+
+    .sg-swatch__box {
+      width: 140px;
+    }
+
+    .table td {
+      padding: 24px 15px !important;
+      vertical-align: top;
+      border-bottom: 1px solid #f5f5f5 !important;
+    }
+
+    .table th {
+      padding-bottom: 15px !important;
+      border-bottom: 2px solid #eeeeee !important;
+    }
+
+    .table td div.text-muted {
+      line-height: 1.6 !important;
+      margin-top: 8px;
+      font-size: 13px !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="py-4 border-bottom mb-4">
+    <div class="container">
+      <h1 class="u-type-h1 m-0 text-dark">Styleguide</h1>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <section class="sg-section">
+      <h2 class="u-type-h2 sg-section__title">Colors</h2>
+      <div class="d-flex flex-wrap gap-4">
+
+        <div class="sg-swatch__box">
+          <div class="rounded-3 border mb-2" style="height: 100px; background: var(--color-brand);"></div>
+          <span class="u-type-mono-tag d-block text-muted mb-1">Brand Orange</span>
+          <span class="u-type-body-xs text-dark d-block">#FF6449</span>
+        </div>
+
+        <div class="sg-swatch__box">
+          <div class="rounded-3 border mb-2" style="height: 100px; background: var(--color-black);"></div>
+          <span class="u-type-mono-tag d-block text-muted mb-1">Black</span>
+          <span class="u-type-body-xs text-dark d-block">#000000</span>
+        </div>
+
+        <div class="sg-swatch__box">
+          <div class="rounded-3 border mb-2" style="height: 100px; background: var(--color-white);"></div>
+          <span class="u-type-mono-tag d-block text-muted mb-1">White</span>
+          <span class="u-type-body-xs text-dark d-block">#FFFFFF</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section class="sg-section">
+      <h2 class="u-type-h2 sg-section__title">Typography</h2>
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr class="u-type-mono-tag text-muted">
+              <th style="width: 40%;">Font Details / Properties</th>
+              <th style="width: 60%;">Preview</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">H1 (<code>.u-type-h1</code> / <code>h1</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: SemiBold (600)<br>
+                  Desktop: 48px / 100%<br>
+                  Mobile: 34px / 100%
+                </div>
+              </td>
+              <td>
+                <h1 class="m-0">The quick brown fox jumps over the lazy dog.</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">H1 Italic (<code>.u-type-h1-italic</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400) Italic<br>
+                  Desktop: 42px / Normal<br>
+                  Mobile: 34px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-h1-italic">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">H2 (<code>.u-type-h2</code> / <code>h2</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: SemiBold (600)<br>
+                  Desktop: 42px / Normal<br>
+                  Mobile: 24px / Normal
+                </div>
+              </td>
+              <td>
+                <h2 class="m-0">The quick brown fox jumps over the lazy dog.</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">H3 (<code>.u-type-h3</code> / <code>h3</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: SemiBold (600)<br>
+                  Desktop: 26px / Normal<br>
+                  Mobile: 20px / Normal
+                </div>
+              </td>
+              <td>
+                <h3 class="m-0">The quick brown fox jumps over the lazy dog.</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">H3 Italic (<code>.u-type-h3-italic</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400) Italic<br>
+                  Desktop: 26px / Normal<br>
+                  Mobile: 20px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-h3-italic">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Special XL (<code>.u-type-special-xl</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: SemiBold (600)<br>
+                  Desktop: 80px / 90%<br>
+                  Mobile: 40px / 90%
+                </div>
+              </td>
+              <td>
+                <div class="u-type-special-xl">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Number (<code>.u-type-number</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400)<br>
+                  Desktop: 80px / Normal<br>
+                  Mobile: 60px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-number">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Intro (<code>.u-type-intro</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400)<br>
+                  Desktop: 26px / Normal<br>
+                  Mobile: 20px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-intro">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Body (<code>.u-type-body</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400)<br>
+                  Desktop/Mobile: 18px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-body">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Body Semi (<code>.u-type-body-semi</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: SemiBold (600)<br>
+                  Desktop/Mobile: 18px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-body-semi">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Body SM (<code>.u-type-body-sm</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400)<br>
+                  Desktop/Mobile: 14px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-body-sm">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Body SM Semi (<code>.u-type-body-sm-semi</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: SemiBold (600)<br>
+                  Desktop/Mobile: 14px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-body-sm-semi">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Body XS (<code>.u-type-body-xs</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Switzer, sans-serif<br>
+                  Weight: Regular (400)<br>
+                  Desktop/Mobile: 12px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-body-xs">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Button Text (<code>.u-type-button</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: Interstate-Bold, sans-serif<br>
+                  Weight: Regular (400) Uppercase<br>
+                  Desktop/Mobile: 22px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-button">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-type-body-semi">Mono Tag (<code>.u-type-mono-tag</code>)</div>
+                <div class="u-type-body-xs text-muted">
+                  Font: InterstateMono, monospace<br>
+                  Weight: Regular (400) Uppercase<br>
+                  Desktop/Mobile: 12px / Normal
+                </div>
+              </td>
+              <td>
+                <div class="u-type-mono-tag">The quick brown fox jumps over the lazy dog.</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="sg-section">
+      <h2 class="u-type-h2 sg-section__title">Buttons</h2>
+      <div class="d-flex flex-wrap gap-4 align-items-center">
+        <!-- Primary Button -->
+        <div class="p-3 border rounded-3 bg-light text-center" style="min-width: 200px;">
+          <div class="u-type-mono-tag text-muted mb-3">Primary Button</div>
+          <button class="c-btn">Button</button>
+        </div>
+        <!-- Tag Static -->
+        <div class="p-3 border rounded-3 bg-light text-center" style="min-width: 200px;">
+          <div class="u-type-mono-tag text-muted mb-3">Tag Static</div>
+          <button class="c-btn--tag">Tag</button>
+        </div>
+        <!-- Tag Selected -->
+        <div class="p-3 border rounded-3 bg-light text-center" style="min-width: 200px;">
+          <div class="u-type-mono-tag text-muted mb-3">Tag Selected</div>
+          <button class="c-btn--tag is-active">Tag</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

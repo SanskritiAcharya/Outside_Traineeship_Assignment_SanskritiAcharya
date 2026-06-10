@@ -1,0 +1,87 @@
+body {
+  font-family: $font-family-base;
+  @include type-style(var(--fs-body), 400);
+}
+
+h1,
+.u-type-h1 {
+  @include fluid-type(34px, 48px);
+  font-weight: 600;
+  letter-spacing: var(--ls-default);
+  line-height: 1;
+}
+
+.u-type-h1-italic {
+  @include fluid-type(34px, 42px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: var(--ls-default);
+}
+
+h2,
+.u-type-h2 {
+  @include fluid-type(24px, 42px);
+  font-weight: 600;
+  letter-spacing: var(--ls-default);
+}
+
+h3,
+.u-type-h3 {
+  @include fluid-type(20px, 26px);
+  font-weight: 600;
+  letter-spacing: var(--ls-default);
+}
+
+.u-type-h3-italic {
+  @include fluid-type(20px, 26px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: var(--ls-default);
+}
+
+.u-type-special-xl {
+  @include fluid-type(40px, 80px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: var(--ls-default);
+}
+
+.u-type-number {
+  @include fluid-type(60px, 80px);
+  font-weight: 400;
+  letter-spacing: var(--ls-number);
+}
+
+.u-type-intro {
+  @include fluid-type(20px, 26px);
+  font-weight: 400;
+  letter-spacing: var(--ls-default);
+}
+
+.u-type-body {
+  @include type-style(var(--fs-body), 400);
+}
+
+.u-type-body-semi {
+  @include type-style(var(--fs-body), 600);
+}
+
+.u-type-body-sm {
+  @include type-style(var(--fs-body-sm), 400);
+}
+
+.u-type-body-sm-semi {
+  @include type-style(var(--fs-body-sm), 600);
+}
+
+.u-type-body-xs {
+  @include type-style(var(--fs-body-xs), 400);
+}
+
+.u-type-button {
+  @extend %btn-typography;
+}
+
+.u-type-mono-tag {
+  @extend %mono-tag-typography;
+}
